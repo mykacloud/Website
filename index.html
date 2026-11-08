@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Myka Cloud Tech Pvt Ltd - Enterprise Cloud Migration, Infrastructure as Code, CI/CD, and DevOps Automation.">
+    <title>Myka Cloud Tech Pvt Ltd | Cloud Infrastructure & DevOps Acceleration</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            dark: '#080d1a',
+                            card: '#0f172a',
+                            cardBorder: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Modern subtle grid backdrop */
+        .bg-tech-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(14, 165, 233, 0.16) 0%, rgba(8, 13, 26, 0) 65%);
+        }
+        .console-shadow {
+            box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.2), 0 0 0 1px rgba(56, 189, 248, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white relative bg-tech-grid">
+
+    <!-- 1. Navigation / Header -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#080d1a]/90 backdrop-blur-md border-b border-brand-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-400 flex items-center justify-center text-white shadow-lg shadow-sky-500/25 group-hover:scale-105 transition-transform duration-200">
+                        <i class="fa-solid fa-cloud-bolt text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold tracking-tight text-white flex items-center gap-1.5 leading-none">
+                            Myka <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">Cloud Tech</span>
+                        </div>
+                        <span class="text-[10px] uppercase tracking-widest text-slate-400 block font-semibold mt-1">Pvt Ltd</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <a href="#services" class="hover:text-sky-400 transition-colors">Services</a>
+                    <a href="#lifecycle" class="hover:text-sky-400 transition-colors">DevOps Lifecycle</a>
+                    <a href="#techstack" class="hover:text-sky-400 transition-colors">Tech Stack</a>
+                    <a href="#metrics" class="hover:text-sky-400 transition-colors">Why Myka</a>
+                    <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-brand-600 hover:from-sky-400 hover:to-brand-500 text-white text-xs font-semibold uppercase tracking-wider shadow-lg shadow-sky-500/20 transition-all hover:shadow-sky-500/30">
+                        Schedule Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#0c1322] border-b border-brand-cardBorder px-6 py-5 space-y-4">
+            <a href="#services" class="block text-slate-300 hover:text-sky-400 text-sm font-medium mobile-nav-link">Services</a>
+            <a href="#lifecycle" class="block text-slate-300 hover:text-sky-400 text-sm font-medium mobile-nav-link">DevOps Lifecycle</a>
+            <a href="#techstack" class="block text-slate-300 hover:text-sky-400 text-sm font-medium mobile-nav-link">Tech Stack</a>
+            <a href="#metrics" class="block text-slate-300 hover:text-sky-400 text-sm font-medium mobile-nav-link">Why Myka</a>
+            <a href="#contact" class="block text-slate-300 hover:text-sky-400 text-sm font-medium mobile-nav-link">Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="block text-center w-full py-3 rounded-xl bg-brand-600 text-white font-semibold text-xs uppercase tracking-wider mobile-nav-link">
+                    Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="relative pt-36 pb-20 lg:pt-44 lg:pb-32 hero-glow overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-950/40 text-sky-400 text-xs font-semibold uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Enterprise Infra & DevOps Excellence
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                        Next-Gen Cloud Infrastructure & <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500">DevOps Acceleration</span>
+                    </h1>
+
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Myka Cloud Tech Pvt Ltd architects resilient multi-cloud environments, accelerates automated CI/CD software pipelines, and modernizes infrastructure with zero-downtime reliability.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-semibold shadow-lg shadow-sky-600/30 text-center transition-all">
+                            Schedule Consultation <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 font-medium text-center transition-all">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Tech Pillars Badges -->
+                    <div class="pt-6 border-t border-slate-800/80">
+                        <p class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">Enterprise Cloud Competencies</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-5 text-sm font-mono text-slate-400">
+                            <span class="flex items-center gap-2"><i class="fa-brands fa-aws text-amber-500 text-base"></i> AWS</span>
+                            <span class="flex items-center gap-2"><i class="fa-brands fa-microsoft text-sky-400 text-base"></i> Azure</span>
+                            <span class="flex items-center gap-2"><i class="fa-brands fa-google text-rose-400 text-base"></i> GCP</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-dharmachakra text-blue-400 text-base"></i> Kubernetes</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-layer-group text-purple-400 text-base"></i> Terraform</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Terminal / Pipeline Preview Mockup -->
+                <div class="lg:col-span-5">
+                    <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-5 console-shadow relative overflow-hidden backdrop-blur-xl">
+                        <!-- Top Bar -->
+                        <div class="flex items-center justify-between pb-3 border-b border-brand-cardBorder text-xs font-mono text-slate-400">
+                            <div class="flex items-center gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                            </div>
+                            <span class="text-slate-400 font-mono">myka-pipeline.yaml</span>
+                            <span class="text-emerald-400 text-[11px] font-semibold flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Live
+                            </span>
+                        </div>
+
+                        <!-- Console Execution Steps -->
+                        <div class="mt-4 font-mono text-xs space-y-2.5 text-slate-300">
+                            <div class="flex items-start gap-2">
+                                <span class="text-sky-400">$</span>
+                                <div>
+                                    <span class="text-slate-400">terraform apply -auto-approve</span>
+                                    <p class="text-emerald-400 text-[11px] mt-0.5">✔ 18 resources added (EKS Multi-AZ, VPC, IAM, RDS)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="text-sky-400">$</span>
+                                <div>
+                                    <span class="text-slate-400">trivy scan --severity CRITICAL</span>
+                                    <p class="text-emerald-400 text-[11px] mt-0.5">✔ 0 vulnerabilities detected. Signed by Cosign.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2">
+                                <span class="text-sky-400">$</span>
+                                <div>
+                                    <span class="text-slate-400">argocd app sync production-cluster</span>
+                                    <p class="text-cyan-400 text-[11px] mt-0.5">✔ Rolling Canary Update: 100% healthy (0 HTTP 5xx)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live Pipeline Status Cards -->
+                        <div class="mt-6 pt-4 border-t border-brand-cardBorder grid grid-cols-2 gap-3">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Build Duration</span>
+                                <span class="text-base font-bold text-white font-mono mt-0.5 block">1m 24s</span>
+                                <span class="text-[10px] text-emerald-400 flex items-center gap-1 font-mono">
+                                    <i class="fa-solid fa-arrow-down"></i> 62% faster
+                                </span>
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Deployment SLA</span>
+                                <span class="text-base font-bold text-white font-mono mt-0.5 block">99.99%</span>
+                                <span class="text-[10px] text-sky-400 flex items-center gap-1 font-mono">Zero-downtime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Core Pillars / Services Section -->
+    <section id="services" class="py-24 bg-slate-900/40 border-y border-brand-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest bg-sky-950/60 px-3.5 py-1.5 rounded-full border border-sky-800/50">Core Pillars</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">End-to-End Cloud & DevOps Engineering</h2>
+                <p class="text-slate-400 mt-3 text-base">We combine automated toolchains, infrastructure governance, and continuous security to accelerate business agility.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1: Cloud Architecture -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-cardBorder hover:border-sky-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl mb-5 group-hover:bg-sky-500 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cloud Strategy & Migration</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Zero-downtime migrations and resilient architecture design across AWS, Azure, Google Cloud, and hybrid cloud topologies.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400 text-[10px]"></i> Well-Architected Framework</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400 text-[10px]"></i> Cloud FinOps & Cost Tuning</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400 text-[10px]"></i> Hybrid & Multi-Cloud VPCs</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Infrastructure as Code -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-cardBorder hover:border-cyan-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-5 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Infrastructure as Code (IaC)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Transform manual infrastructure provisioning into deterministic, repeatable, version-controlled code using modern tools.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Terraform & OpenTofu Modules</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Ansible Configuration Mgmt</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400 text-[10px]"></i> Automated Drift Detection</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: CI/CD & DevOps Processes -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-cardBorder hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-5 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-code-merge"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">DevOps & CI/CD Pipelines</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Streamline container delivery with GitOps, continuous testing, canary releases, and orchestrated Kubernetes rollouts.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> GitOps via ArgoCD & Flux</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> GitHub Actions & Jenkins</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-[10px]"></i> Microservice Autoscaling</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: DevSecOps & Observability -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-cardBorder hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-200">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">DevSecOps & SRE Monitoring</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Shift-left security scanning embedded directly into developer pull requests alongside 24/7 cluster telemetry.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2 font-mono">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Prometheus, Grafana & Datadog</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> HashiCorp Vault Secrets</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> SAST / DAST Vulnerability Scans</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Interactive DevOps Lifecycle / Process Section -->
+    <section id="lifecycle" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest bg-sky-950/60 px-3.5 py-1.5 rounded-full border border-sky-800/50">Execution Framework</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">The Myka Continuous DevOps Lifecycle</h2>
+                <p class="text-slate-400 mt-3 text-base">Click through each phase of our delivery roadmap to see how we transform infrastructure delivery.</p>
+            </div>
+
+            <!-- Lifecycle Interactive Tabs -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
+                <button onclick="switchTab('plan')" id="tab-plan" class="lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border transition-all text-left flex items-center gap-3 bg-brand-600 text-white border-sky-400 shadow-md">
+                    <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center font-mono text-xs">1</span>
+                    <span>Plan & Architect</span>
+                </button>
+                <button onclick="switchTab('iac')" id="tab-iac" class="lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border border-brand-cardBorder bg-brand-card text-slate-400 hover:text-white transition-all text-left flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center font-mono text-xs">2</span>
+                    <span>IaC & Provision</span>
+                </button>
+                <button onclick="switchTab('cicd')" id="tab-cicd" class="lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border border-brand-cardBorder bg-brand-card text-slate-400 hover:text-white transition-all text-left flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center font-mono text-xs">3</span>
+                    <span>CI/CD Automation</span>
+                </button>
+                <button onclick="switchTab('observe')" id="tab-observe" class="lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border border-brand-cardBorder bg-brand-card text-slate-400 hover:text-white transition-all text-left flex items-center gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center font-mono text-xs">4</span>
+                    <span>Security & SRE</span>
+                </button>
+            </div>
+
+            <!-- Tab Content Display Area -->
+            <div class="max-w-4xl mx-auto bg-brand-card border border-brand-cardBorder p-8 rounded-2xl relative shadow-xl">
+                <!-- Content 1: Plan -->
+                <div id="content-plan" class="tab-pane space-y-4">
+                    <div class="flex items-center gap-3 text-sky-400">
+                        <i class="fa-solid fa-diagram-project text-2xl"></i>
+                        <h4 class="text-xl font-bold text-white">Phase 1: Architecture Blueprinting & Strategy</h4>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        We perform an in-depth audit of current workload dependencies, traffic topologies, and security perimeters. We formulate high-availability multi-region blueprints adhering to AWS, Azure, and Google Cloud Well-Architected frameworks.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-sky-400 font-bold block mb-1">Deliverable</span> High-Level Architecture (HLA)
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-sky-400 font-bold block mb-1">Focus</span> High Availability & Disaster Recovery
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-sky-400 font-bold block mb-1">Optimization</span> FinOps Cost Budget Planning
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 2: IaC -->
+                <div id="content-iac" class="tab-pane hidden space-y-4">
+                    <div class="flex items-center gap-3 text-cyan-400">
+                        <i class="fa-solid fa-file-code text-2xl"></i>
+                        <h4 class="text-xl font-bold text-white">Phase 2: Declarative Infrastructure as Code (IaC)</h4>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Manual console tweaks are replaced with immutable, versioned Terraform & OpenTofu modules. All networking, security groups, database instances, and Kubernetes clusters are built with automated verification tests.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-cyan-400 font-bold block mb-1">Tooling</span> Terraform, OpenTofu, Ansible
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-cyan-400 font-bold block mb-1">State Mgmt</span> Remote encrypted S3/GCS states
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-cyan-400 font-bold block mb-1">Speed</span> Spun up in under 15 minutes
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 3: CI/CD -->
+                <div id="content-cicd" class="tab-pane hidden space-y-4">
+                    <div class="flex items-center gap-3 text-blue-400">
+                        <i class="fa-solid fa-rocket text-2xl"></i>
+                        <h4 class="text-xl font-bold text-white">Phase 3: Continuous Integration & Automated GitOps</h4>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Code commits trigger automated linting, unit testing, container compilation, and GitOps deployments. Releases utilize canary rollouts and blue-green strategies to guarantee zero impact on active end users.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-blue-400 font-bold block mb-1">Pipelines</span> GitHub Actions, GitLab CI, Jenkins
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-blue-400 font-bold block mb-1">CD Pattern</span> GitOps via ArgoCD & Helm
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-blue-400 font-bold block mb-1">Rollback</span> Instant automated rollbacks
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content 4: Security & SRE -->
+                <div id="content-observe" class="tab-pane hidden space-y-4">
+                    <div class="flex items-center gap-3 text-emerald-400">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                        <h4 class="text-xl font-bold text-white">Phase 4: DevSecOps, Observability & 24/7 SRE</h4>
+                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Comprehensive metrics, distributed traces, and log monitoring provide real-time operational clarity. Security policies, secret rotations, and SAST/DAST audits ensure strict continuous enterprise compliance.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-emerald-400 font-bold block mb-1">Telemetry</span> Prometheus, Grafana, OpenTelemetry
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-emerald-400 font-bold block mb-1">Security</span> Shift-Left SAST/DAST & Vault
+                        </div>
+                        <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                            <span class="text-emerald-400 font-bold block mb-1">Availability</span> 99.99% SLA Incident Response
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Technology Stack Grid -->
+    <section id="techstack" class="py-20 bg-slate-900/50 border-y border-brand-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest bg-sky-950/60 px-3.5 py-1.5 rounded-full border border-sky-800/50">Modern Ecosystem</span>
+                <h2 class="text-3xl font-extrabold text-white mt-4">Supported Technologies & Platforms</h2>
+                <p class="text-slate-400 text-sm mt-2">Production-tested tools we leverage to build resilient cloud architectures.</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-aws text-3xl text-amber-500 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">AWS Cloud</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-microsoft text-3xl text-sky-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Microsoft Azure</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-google text-3xl text-rose-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Google Cloud</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-solid fa-dharmachakra text-3xl text-blue-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Kubernetes</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-docker text-3xl text-cyan-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Docker</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-solid fa-layer-group text-3xl text-purple-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Terraform</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-github text-3xl text-slate-200 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">GitHub Actions</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-jenkins text-3xl text-red-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Jenkins</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-solid fa-shield-cat text-3xl text-emerald-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">HashiCorp Vault</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-solid fa-fire-flame-curved text-3xl text-orange-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Prometheus</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-solid fa-chart-pie text-3xl text-amber-400 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Grafana</span>
+                </div>
+                <div class="bg-brand-card border border-brand-cardBorder p-4 rounded-xl flex flex-col items-center justify-center text-center hover:border-sky-500/40 transition-colors">
+                    <i class="fa-brands fa-linux text-3xl text-amber-300 mb-2"></i>
+                    <span class="text-xs font-semibold text-white">Linux & SRE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Trust & Impact Statistics Banner -->
+    <section id="metrics" class="py-20 bg-brand-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300 font-mono">99.99%</div>
+                    <div class="text-sm font-semibold text-white mt-2">Uptime Reliability SLA</div>
+                    <p class="text-xs text-slate-400 mt-1">Multi-AZ automated failover</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300 font-mono">4x</div>
+                    <div class="text-sm font-semibold text-white mt-2">Faster Deployment Rate</div>
+                    <p class="text-xs text-slate-400 mt-1">Via automated GitOps pipelines</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300 font-mono">40%+</div>
+                    <div class="text-sm font-semibold text-white mt-2">Cloud Spend Reduction</div>
+                    <p class="text-xs text-slate-400 mt-1">Continuous FinOps audits</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300 font-mono">24/7</div>
+                    <div class="text-sm font-semibold text-white mt-2">Managed SRE Operations</div>
+                    <p class="text-xs text-slate-400 mt-1">Rapid response incident alert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact / Consultation Form -->
+    <section id="contact" class="py-24 bg-slate-900/40 border-t border-brand-cardBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-sky-400 font-semibold text-xs uppercase tracking-widest bg-sky-950/60 px-3.5 py-1.5 rounded-full border border-sky-800/50">Partner With Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let’s Modernize Your Infrastructure</h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Reach out to our cloud architects. We review your current configuration, discuss your performance bottlenecks, and design a customized migration or automation plan.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Enterprise Entity</h4>
+                                <p class="text-xs text-slate-400">Myka Cloud Tech Pvt Ltd</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Inquiries & Support</h4>
+                                <p class="text-xs text-slate-400">info@mykacloudtech.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-slate-800 text-sky-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white">Technical Consultation</h4>
+                                <p class="text-xs text-slate-400">Mon - Fri: 9:00 AM - 6:00 PM IST (24/7 for Managed SRE)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-card p-6 sm:p-8 rounded-2xl border border-brand-cardBorder relative shadow-2xl">
+                        
+                        <!-- Success Notification Banner -->
+                        <div id="formSuccessAlert" class="hidden mb-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-sm flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                            <div>
+                                <span class="font-semibold block">Thank you! Your inquiry has been received.</span>
+                                A senior cloud architect from Myka Cloud Tech will contact you shortly.
+                            </div>
+                        </div>
+
+                        <form id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit();" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fullName" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Full Name *</label>
+                                    <input type="text" id="fullName" required placeholder="e.g. Rahul Sharma" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="workEmail" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Work Email *</label>
+                                    <input type="email" id="workEmail" required placeholder="rahul@company.com" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="companyName" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Company Name</label>
+                                    <input type="text" id="companyName" placeholder="e.g. Acme Technologies" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="serviceInterest" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Core Requirement *</label>
+                                    <select id="serviceInterest" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors">
+                                        <option value="cloud-migration">Cloud Migration & Multi-Cloud</option>
+                                        <option value="iac-terraform">Infrastructure as Code (Terraform / OpenTofu)</option>
+                                        <option value="cicd-devops">DevOps Pipelines & CI/CD Automation</option>
+                                        <option value="k8s-orchestration">Kubernetes & Container Strategy</option>
+                                        <option value="devsecops-audit">DevSecOps & Compliance Audit</option>
+                                        <option value="other">General SRE / Consulting</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="projectDetails" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Project Overview / Goals *</label>
+                                <textarea id="projectDetails" rows="4" required placeholder="Tell us about your current stack, pain points, or expected deployment milestones..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-sky-500 to-brand-600 hover:from-sky-400 hover:to-brand-500 text-white font-semibold text-sm shadow-lg shadow-sky-600/30 transition-all">
+                                Request Technical Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer class="bg-[#050811] border-t border-brand-cardBorder text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Col 1: About -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded-lg bg-sky-500 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-cloud-bolt"></i>
+                        </div>
+                        <span class="font-bold text-white text-sm">Myka Cloud Tech</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Myka Cloud Tech Pvt Ltd is a premier provider of cloud infrastructure architecture, Terraform IaC, and Kubernetes-driven DevOps pipelines.
+                    </p>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Expertise</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Multi-Cloud Migration</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Terraform & OpenTofu IaC</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Kubernetes (EKS / AKS / GKE)</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">DevSecOps & Shift-Left</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Quick Links -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Navigation</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="hover:text-sky-400 transition-colors">Overview</a></li>
+                        <li><a href="#lifecycle" class="hover:text-sky-400 transition-colors">DevOps Lifecycle</a></li>
+                        <li><a href="#techstack" class="hover:text-sky-400 transition-colors">Tech Ecosystem</a></li>
+                        <li><a href="#contact" class="hover:text-sky-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Social / Connect -->
+                <div>
+                    <h5 class="text-white font-semibold uppercase tracking-wider text-xs mb-3">Social & Connect</h5>
+                    <div class="flex gap-3 text-base text-slate-300">
+                        <a href="https://github.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-colors" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-brand-cardBorder flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 Myka Cloud Tech Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#hero" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                    <a href="#hero" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Scripts -->
+    <script>
+        // 1. Mobile Menu Drawer Toggle
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.toggle('hidden');
+            if (isClosed) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close drawer on link click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 2. Lifecycle Interactive Tabs Switcher
+        const tabConfigs = ['plan', 'iac', 'cicd', 'observe'];
+
+        function switchTab(activeKey) {
+            tabConfigs.forEach(key => {
+                const btn = document.getElementById(`tab-${key}`);
+                const content = document.getElementById(`content-${key}`);
+
+                if (key === activeKey) {
+                    btn.className = "lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border transition-all text-left flex items-center gap-3 bg-brand-600 text-white border-sky-400 shadow-md";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "lifecycle-tab py-3 px-4 rounded-xl text-xs sm:text-sm font-semibold border border-brand-cardBorder bg-brand-card text-slate-400 hover:text-white transition-all text-left flex items-center gap-3";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        // 3. Contact Form Submission (Safe Inline Notification)
+        function handleFormSubmit() {
+            const alertBox = document.getElementById('formSuccessAlert');
+            const form = document.getElementById('contactForm');
+
+            // Show feedback banner
+            alertBox.classList.remove('hidden');
+            form.reset();
+
+            // Smoothly scroll alert into focus
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Automatically hide after 6 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
