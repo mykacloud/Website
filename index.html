@@ -798,7 +798,7 @@
                 </div>
                 <div>
                   <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Email Desk</div>
-                  <div class="text-base font-bold text-white">info@mykacloud.com</div>
+                  <div class="text-base font-bold text-white">contact@mykacloud.com.com</div>
                 </div>
               </div>
 
@@ -1136,11 +1136,11 @@
           enquiryForm.reset();
         } else {
           statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-rose-500/20 border border-rose-500/50 text-rose-300 block';
-          statusBox.textContent = result.message || 'Submission failed. Please email us directly at info@mykacloud.com.';
+          statusBox.textContent = result.message || 'Submission failed. Please email us directly at contact@mykacloud.com.com.';
         }
       } catch (err) {
         statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-rose-500/20 border border-rose-500/50 text-rose-300 block';
-        statusBox.textContent = 'Network or connection error. Please verify your internet or contact info@mykacloud.com.';
+        statusBox.textContent = 'Network or connection error. Please verify your internet or contact contact@mykacloud.com.com.';
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
