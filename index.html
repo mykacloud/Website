@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Myka Cloud Tech Pvt Ltd | Ultra-Modern Cloud, AIOps & Enterprise GenAI Infrastructure</title>
-  <meta name="description" content="Next-generation Cloud Engineering, Infrastructure as Code, Autonomous AIOps, Kubernetes, Enterprise LLM Deployments, and AI Chatbots." />
+  <title>Myka Cloud Tech Pvt Ltd | Enterprise Cloud, DevOps & AI Consulting Partner</title>
+  <meta name="description" content="Next-Gen Enterprise Cloud Transformation, DevOps as a Service, Autonomous AIOps, Site Reliability Engineering, and Private Generative AI Infrastructure." />
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FontAwesome 6 -->
@@ -23,36 +23,24 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            cyber: {
-              black: '#030712',
-              card: '#080E1E',
-              cardHover: '#0E172E',
-              cyan: '#06B6D4',
-              cyanGlow: '#22D3EE',
-              violet: '#8B5CF6',
-              violetGlow: '#A78BFA',
-              emerald: '#10B981',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderActive: 'rgba(6, 182, 212, 0.4)'
-            }
-          },
-          backgroundImage: {
-            'grid-pattern': "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0)",
-            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-          },
-          animation: {
-            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'float': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-10px)' },
-            }
+            primary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              purple: '#5025d1', /* Exact Pill Active Gradient Tone */
+              purpleHover: '#421eb3',
+              accent: '#7c3aed'
+            },
+            slateBg: '#090D1A',
+            slateCard: '#0F172A',
+            slateCardHover: '#17223B',
+            slateBorder: 'rgba(255, 255, 255, 0.08)'
           }
         }
       }
@@ -60,231 +48,211 @@
   </script>
 
   <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
+    /* Sleek Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #090D1A; }
+    ::-webkit-scrollbar-thumb { background: #27354f; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #5025d1; }
+
+    /* Pill Selection Glow & Animation */
+    .service-pill-btn {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    ::-webkit-scrollbar-track {
-      background: #030712;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1f2937;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #06b6d4;
+    .service-pill-btn.active {
+      background-color: #5025d1 !important;
+      color: #ffffff !important;
+      border-color: #5025d1 !important;
+      box-shadow: 0 10px 25px -5px rgba(80, 37, 209, 0.45);
     }
 
-    /* Glow utilities */
-    .glow-cyan {
-      box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.35);
-    }
-    .glow-violet {
-      box-shadow: 0 0 35px -5px rgba(139, 92, 246, 0.35);
-    }
-    .glow-border {
-      border: 1px solid rgba(6, 182, 212, 0.25);
-    }
-    .text-glow {
-      text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
-    }
-
-    /* Subtle Animated Grid Background */
-    .cyber-grid {
-      background-size: 32px 32px;
+    /* Subtle background grid */
+    .bg-grid {
+      background-size: 40px 40px;
       background-image: 
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
   </style>
 </head>
-<body class="bg-cyber-black text-slate-200 antialiased font-sans selection:bg-cyan-500 selection:text-slate-900 cyber-grid relative min-h-screen">
+<body class="bg-slateBg text-slate-100 font-sans antialiased selection:bg-primary-purple selection:text-white bg-grid relative min-h-screen">
 
-  <!-- Ambient Radiant Orbs -->
-  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
-  <div class="fixed top-1/3 right-10 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
-  <div class="fixed bottom-10 left-1/3 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[170px] pointer-events-none -z-10"></div>
+  <!-- Ambient Radiant Atmospheric Lights -->
+  <div class="fixed -top-40 left-1/3 w-[650px] h-[650px] bg-primary-purple/15 rounded-full blur-[170px] pointer-events-none -z-10"></div>
+  <div class="fixed top-1/2 right-10 w-[550px] h-[550px] bg-indigo-600/10 rounded-full blur-[170px] pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 left-10 w-[550px] h-[550px] bg-cyan-600/10 rounded-full blur-[180px] pointer-events-none -z-10"></div>
 
-  <!-- ==================== ULTRA NAVIGATION ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#030712]/85 backdrop-blur-xl border-b border-white/[0.08]">
+  <!-- ==================== HEADER & ENTERPRISE NAVIGATION ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#090D1A]/90 backdrop-blur-xl border-b border-white/[0.08]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3.5 group">
-        <div class="relative">
-          <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 via-blue-600 to-violet-600 flex items-center justify-center shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-transform duration-300">
-            <i class="fa-solid fa-microchip text-slate-950 text-xl font-black"></i>
-          </div>
-          <span class="absolute -top-1 -right-1 flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-          </span>
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#5025d1] via-indigo-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-primary-purple/30 group-hover:scale-105 transition-all">
+          <i class="fa-solid fa-cloud-bolt text-white text-lg"></i>
         </div>
         <div>
-          <span class="text-xl font-black tracking-tight text-white flex items-center gap-1.5">
-            MYKA <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">CLOUD TECH</span>
+          <span class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
+            MYKA <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-400">CLOUD TECH</span>
           </span>
           <div class="flex items-center gap-2 -mt-1">
-            <span class="text-[10px] tracking-widest text-slate-400 uppercase font-mono font-bold">Pvt Ltd</span>
+            <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase font-bold">Pvt Ltd</span>
             <span class="text-slate-600 text-xs">•</span>
-            <span class="text-[10px] text-emerald-400 font-mono flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> AIOps Active
-            </span>
+            <span class="text-[10px] text-cyan-400 font-mono">Cloud • DevOps • AI</span>
           </div>
         </div>
       </a>
 
       <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
-        <a href="#services" class="text-slate-300 hover:text-cyan-400 transition-colors">Core Pillars</a>
-        <a href="#aiops" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-violet-500/20 text-violet-300 border border-violet-500/30">AI</span>
-          AIOps & Observability
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#services" class="hover:text-white transition-colors">Our Services</a>
+        <a href="#ai-practice" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <span class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30">AI</span>
+          AIOps & GenAI
         </a>
-        <a href="#genai" class="text-slate-300 hover:text-cyan-400 transition-colors">GenAI Infra & LLMs</a>
-        <a href="#stack" class="text-slate-300 hover:text-cyan-400 transition-colors">Tech Matrix</a>
-        <a href="#copilot" class="text-slate-300 hover:text-cyan-400 transition-colors">AI Demo</a>
-        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5">
-          Consult Architects
+        <a href="#process" class="hover:text-white transition-colors">Methodology</a>
+        <a href="#stack" class="hover:text-white transition-colors">Tech Matrix</a>
+        <a href="#why-us" class="hover:text-white transition-colors">Why Myka</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-[#5025d1] hover:bg-[#421eb3] text-white font-bold transition-all shadow-lg shadow-[#5025d1]/30 hover:shadow-[#5025d1]/50 hover:-translate-y-0.5">
+          Talk to Experts
         </a>
       </nav>
 
-      <!-- Mobile Button -->
-      <button id="mobile-toggle" class="lg:hidden text-slate-400 hover:text-white p-2 text-2xl focus:outline-none" aria-label="Toggle Navigation">
-        <i class="fa-solid fa-bars-staggered"></i>
+      <!-- Mobile Menu Trigger -->
+      <button id="mobile-toggle" class="lg:hidden text-slate-300 hover:text-white p-2 text-2xl focus:outline-none" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-cyber-black/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 space-y-4">
-      <a href="#services" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">Core Pillars</a>
-      <a href="#aiops" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">AIOps & Observability</a>
-      <a href="#genai" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">Enterprise LLMs & GenAI</a>
-      <a href="#stack" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">Tech Matrix</a>
-      <a href="#copilot" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">AI Copilot Demo</a>
-      <a href="#contact" class="mobile-nav-link block text-center py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold mt-4 shadow-lg shadow-cyan-500/30">
-        Initiate Project
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#090D1A]/95 border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#services" class="mobile-nav-link block text-slate-300 hover:text-white py-1 font-medium">Our Services</a>
+      <a href="#ai-practice" class="mobile-nav-link block text-slate-300 hover:text-white py-1 font-medium">AIOps & GenAI Practice</a>
+      <a href="#process" class="mobile-nav-link block text-slate-300 hover:text-white py-1 font-medium">DevOps Lifecycle</a>
+      <a href="#stack" class="mobile-nav-link block text-slate-300 hover:text-white py-1 font-medium">Technology Stack</a>
+      <a href="#why-us" class="mobile-nav-link block text-slate-300 hover:text-white py-1 font-medium">Why Choose Us</a>
+      <a href="#contact" class="mobile-nav-link block text-center py-3 rounded-full bg-[#5025d1] text-white font-bold mt-4 shadow-lg shadow-[#5025d1]/30">
+        Talk to Experts
       </a>
     </div>
   </header>
 
   <main>
-    <!-- ==================== HERO SECTION WITH TERMINAL ==================== -->
-    <section class="pt-32 pb-20 lg:pt-44 lg:pb-32 relative overflow-hidden">
+    <!-- ==================== HERO SECTION (To The New & CICD Tech Inspired) ==================== -->
+    <section class="pt-36 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Hero Header -->
-        <div class="text-center max-w-4xl mx-auto mb-14">
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-violet-500/10 to-emerald-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-medium tracking-wide mb-6">
-            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            Next-Gen Autonomous Cloud & Enterprise LLM Infrastructure
-          </div>
-
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
-            Architecting <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500">Autonomous Cloud</span> & Intelligent <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400">AIOps Pipelines</span>
-          </h1>
-
-          <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-            From multi-region Kubernetes clusters & Terraform GitOps to high-throughput Enterprise LLM fine-tuning and self-healing AIOps telemetry.
-          </p>
-
-          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-all duration-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 flex items-center justify-center gap-2.5">
-              <i class="fa-solid fa-rocket"></i> Request Architecture Strategy
-            </a>
-            <a href="#copilot" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/90 border border-white/10 hover:border-violet-500/50 text-slate-200 font-semibold transition flex items-center justify-center gap-2.5 hover:bg-slate-800">
-              <i class="fa-solid fa-terminal text-violet-400"></i> Test Live AI DevOps Simulator
-            </a>
-          </div>
-
-          <!-- Hero Telemetry Counters -->
-          <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div class="p-4 rounded-2xl bg-cyber-card border border-white/[0.06] backdrop-blur-sm">
-              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-cyan-400">99.999%</div>
-              <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Reliability Target</div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column Content -->
+          <div class="lg:col-span-7 text-left">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#5025d1]/15 border border-[#5025d1]/40 text-purple-300 text-xs font-mono font-medium tracking-wide mb-6">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              Strategic Cloud, DevOps & AI Engineering Firm
             </div>
-            <div class="p-4 rounded-2xl bg-cyber-card border border-white/[0.06] backdrop-blur-sm">
-              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-violet-400">&lt; 30s</div>
-              <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">AIOps Remediation</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-cyber-card border border-white/[0.06] backdrop-blur-sm">
-              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-400">100%</div>
-              <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">IaC Reproducibility</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-cyber-card border border-white/[0.06] backdrop-blur-sm">
-              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-sky-400">40% - 60%</div>
-              <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Cloud Cost Reduction</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- ==================== INTERACTIVE LIVE SIMULATOR TERMINAL ==================== -->
-        <div class="max-w-5xl mx-auto rounded-2xl bg-cyber-card/95 border border-white/10 shadow-2xl glow-cyan overflow-hidden backdrop-blur-xl">
-          <!-- Terminal Header -->
-          <div class="px-5 py-3.5 bg-slate-900/90 border-b border-white/10 flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-              <span class="text-xs font-mono text-slate-400 ml-3">myka-agent-control-plane v3.4.1</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+              Accelerate Your Enterprise with <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-400">Cloud, DevOps & AIOps</span> Excellence
+            </h1>
+
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-light max-w-2xl">
+              As a dedicated transformation partner, Myka Cloud Tech Pvt Ltd architects high-resilience multi-cloud environments, automated CI/CD GitOps pipelines, and private enterprise GenAI infrastructure.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="#contact" class="px-8 py-4 rounded-full bg-[#5025d1] hover:bg-[#421eb3] text-white font-bold text-center transition-all shadow-xl shadow-[#5025d1]/35 hover:shadow-[#5025d1]/50 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <span>Schedule Architecture Review</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+              <a href="#services" class="px-8 py-4 rounded-full bg-slateCard/90 hover:bg-slate-800 border border-white/10 text-slate-200 font-semibold text-center transition flex items-center justify-center gap-2">
+                <span>Explore Capabilities</span>
+              </a>
             </div>
-            <!-- Terminal Tab Selector -->
-            <div class="flex items-center gap-1.5 p-1 bg-cyber-black rounded-lg border border-white/[0.08]" id="terminal-tab-container">
-              <button data-tab="aiops" class="term-tab px-3 py-1 text-xs font-mono rounded-md bg-cyan-500 text-slate-950 font-bold transition">AIOps Auto-Heal</button>
-              <button data-tab="k8s" class="term-tab px-3 py-1 text-xs font-mono rounded-md text-slate-400 hover:text-white transition">K8s GitOps</button>
-              <button data-tab="terraform" class="term-tab px-3 py-1 text-xs font-mono rounded-md text-slate-400 hover:text-white transition">IaC Synth</button>
-              <button data-tab="llm" class="term-tab px-3 py-1 text-xs font-mono rounded-md text-slate-400 hover:text-white transition">vLLM Inference</button>
+
+            <!-- Client Proof Points -->
+            <div class="mt-12 pt-8 border-t border-white/[0.08] grid grid-cols-3 gap-6 max-w-lg">
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">99.99%</div>
+                <div class="text-xs text-slate-400 font-medium mt-1">Uptime SLA Target</div>
+              </div>
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">4x Faster</div>
+                <div class="text-xs text-slate-400 font-medium mt-1">Pipeline Velocity</div>
+              </div>
+              <div>
+                <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">40% Less</div>
+                <div class="text-xs text-slate-400 font-medium mt-1">Cloud Spend (FinOps)</div>
+              </div>
             </div>
           </div>
 
-          <!-- Terminal Screen Body -->
-          <div class="p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto min-h-[290px] bg-cyber-black/95">
-            <!-- AIOps View -->
-            <div id="term-view-aiops" class="term-view space-y-2">
-              <p class="text-slate-500">[08:42:01.109] <span class="text-violet-400">INFO</span> [AIOps-SRE-Engine] Streaming metrics from Prometheus & Datadog collectors across 42 microservices...</p>
-              <p class="text-amber-400">[08:42:01.350] <span class="text-rose-400 font-bold">ANOMALY_DETECTED</span> Pod 'auth-svc-prod-8df98c-2q89x' memory latency spiked +284ms above normal baseline.</p>
-              <p class="text-slate-300">[08:42:01.402] <span class="text-cyan-400">DIAGNOSIS</span> Memory leak in connection pool thread pool worker. Root-cause correlation index: 98.4%.</p>
-              <p class="text-emerald-400">[08:42:01.620] <span class="text-emerald-300">AUTONOMOUS_ACTION</span> Rolling container graceful restart + bumping memory limits to 2Gi via dynamic Kube-Mutator.</p>
-              <p class="text-cyan-300">[08:42:02.100] <span class="text-emerald-400 font-bold">RESOLVED</span> Latency dropped back to 12ms. Zero manual engineer page required.</p>
-              <p class="text-slate-400 mt-4 flex items-center gap-2">
-                <span class="text-cyan-400 animate-pulse">❯</span> myka-aiops status: <span class="text-emerald-400">ALL CLUSTERS HEALTHY (P99: 14.2ms)</span>
-              </p>
-            </div>
+          <!-- Right Column: Interactive Infrastructure Console Card -->
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl bg-slateCard border border-white/10 p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+              <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                  <span class="text-xs font-mono text-slate-400 ml-2">myka-agent-control-plane</span>
+                </div>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  HEALTHY (32 Clusters)
+                </span>
+              </div>
 
-            <!-- K8s View (Hidden Initially) -->
-            <div id="term-view-k8s" class="term-view hidden space-y-2">
-              <p class="text-slate-500">[GitOps-Sync] ArgoCD Application 'payment-mesh-v2' synchronizing with repo...</p>
-              <p class="text-sky-400">$ kubectl get pods -n production -l app=payment-mesh</p>
-              <p class="text-slate-300">payment-mesh-64b59f-m5k9l &nbsp; 2/2 &nbsp; Running &nbsp; 0 &nbsp; 44s &nbsp; IP: 10.244.3.41 &nbsp; Node: ip-10-0-4-192.ec2</p>
-              <p class="text-slate-300">payment-mesh-64b59f-z7v1w &nbsp; 2/2 &nbsp; Running &nbsp; 0 &nbsp; 44s &nbsp; IP: 10.244.5.18 &nbsp; Node: ip-10-0-5-201.ec2</p>
-              <p class="text-emerald-400">[Canary Progress] Traffic weight shifted: 10% -> 50% -> 100%. Error rate &lt; 0.001%.</p>
-              <p class="text-slate-400 mt-4 flex items-center gap-2">
-                <span class="text-cyan-400 animate-pulse">❯</span> helm status mesh: <span class="text-emerald-400">DEPLOYED (Zero Downtime)</span>
-              </p>
-            </div>
+              <!-- Console Metric Cards -->
+              <div class="space-y-4 font-mono text-xs">
+                <div class="p-4 rounded-xl bg-[#090D1A] border border-white/[0.06] flex items-center justify-between">
+                  <div>
+                    <div class="text-slate-400 text-[11px]">Multi-Cloud Landing Zone</div>
+                    <div class="text-white font-bold text-sm mt-0.5 flex items-center gap-2">
+                      <i class="fa-brands fa-aws text-amber-500"></i>
+                      <i class="fa-brands fa-microsoft text-blue-400"></i>
+                      <i class="fa-brands fa-google text-rose-400"></i>
+                      <span>AWS + Azure + GCP</span>
+                    </div>
+                  </div>
+                  <span class="text-emerald-400 font-bold">IaC Synced</span>
+                </div>
 
-            <!-- Terraform View -->
-            <div id="term-view-terraform" class="term-view hidden space-y-2">
-              <p class="text-slate-500">$ terraform plan -out=production.tfplan</p>
-              <p class="text-slate-300">Terraform will perform the following actions:</p>
-              <p class="text-emerald-400">+ module.gpu_cluster.aws_eks_node_group.h100_nodes [8x NVIDIA H100 SXM5]</p>
-              <p class="text-emerald-400">+ module.vpc_isolated.aws_route53_resolver_endpoint.private_dns</p>
-              <p class="text-emerald-400">+ module.cloudwatch_alarms.aws_sns_topic.aiops_slack_webhook</p>
-              <p class="text-cyan-400">Plan: 14 to add, 0 to change, 0 to destroy. Changes compliant with CIS Benchmarks & SOC2.</p>
-              <p class="text-slate-400 mt-4 flex items-center gap-2">
-                <span class="text-cyan-400 animate-pulse">❯</span> opentofu apply: <span class="text-emerald-400">READY FOR DISPATCH</span>
-              </p>
-            </div>
+                <div class="p-4 rounded-xl bg-[#090D1A] border border-white/[0.06] flex items-center justify-between">
+                  <div>
+                    <div class="text-slate-400 text-[11px]">GitOps CI/CD Pipelines</div>
+                    <div class="text-white font-bold text-sm mt-0.5 flex items-center gap-2">
+                      <i class="fa-brands fa-docker text-sky-400"></i>
+                      <i class="fa-solid fa-dharmachakra text-indigo-400"></i>
+                      <span>ArgoCD Canary Rollout</span>
+                    </div>
+                  </div>
+                  <span class="text-cyan-400 font-bold">&lt; 180s Build</span>
+                </div>
 
-            <!-- LLM View -->
-            <div id="term-view-llm" class="term-view hidden space-y-2">
-              <p class="text-slate-500">[vLLM Cluster Engine] Booting Ray distributed workers across 4x A100 (80GB SXM4)...</p>
-              <p class="text-violet-400">[Model Load] Llama-3-70B-Instruct-AWQ loaded into VRAM in 8.4 seconds.</p>
-              <p class="text-slate-300">[RAG Vector Index] Milvus / Qdrant connected. 4.2 million enterprise tokens indexed.</p>
-              <p class="text-emerald-400">[Benchmark] Throughput: 1,480 tokens/sec | First-token latency: 19ms | GPU Temp: 58°C.</p>
-              <p class="text-slate-400 mt-4 flex items-center gap-2">
-                <span class="text-violet-400 animate-pulse">❯</span> api.myka.ai/v1/chat/completions: <span class="text-emerald-400">ACTIVE &amp; AUTO-SCALING</span>
-              </p>
+                <div class="p-4 rounded-xl bg-[#090D1A] border border-white/[0.06] flex items-center justify-between">
+                  <div>
+                    <div class="text-slate-400 text-[11px]">Autonomous SRE &amp; AIOps Engine</div>
+                    <div class="text-white font-bold text-sm mt-0.5 flex items-center gap-2">
+                      <i class="fa-solid fa-robot text-purple-400"></i>
+                      <span>Prometheus + ML Anomaly</span>
+                    </div>
+                  </div>
+                  <span class="text-emerald-400 font-bold">Self-Healing</span>
+                </div>
+
+                <div class="p-4 rounded-xl bg-[#090D1A] border border-white/[0.06] flex items-center justify-between">
+                  <div>
+                    <div class="text-slate-400 text-[11px]">Enterprise LLM / GPU Cluster</div>
+                    <div class="text-white font-bold text-sm mt-0.5 flex items-center gap-2">
+                      <i class="fa-solid fa-brain text-purple-400"></i>
+                      <span>vLLM + Qdrant Vector RAG</span>
+                    </div>
+                  </div>
+                  <span class="text-purple-300 font-bold">18ms Latency</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+                <span>SOC2 Type II • ISO 27001</span>
+                <span class="text-purple-300 font-semibold"><i class="fa-solid fa-shield-check mr-1"></i> Zero-Trust Hardened</span>
+              </div>
             </div>
           </div>
         </div>
@@ -292,229 +260,293 @@
       </div>
     </section>
 
-    <!-- ==================== THREE CORE TECH PILLARS ==================== -->
-    <section id="services" class="py-24 border-t border-white/[0.08] relative">
+    <!-- ==================== LOGO ECOSYSTEM STRIP ==================== -->
+    <div class="py-10 border-y border-white/[0.08] bg-slateCard/40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-xs uppercase tracking-widest text-slate-400 font-bold mb-6 font-mono">
+          Enterprise Cloud, DevOps &amp; AI Ecosystem Partners
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-slate-400 text-sm font-semibold">
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-brands fa-aws text-2xl text-amber-500"></i> AWS Partner</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-brands fa-microsoft text-2xl text-blue-400"></i> Microsoft Azure</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-brands fa-google text-2xl text-rose-400"></i> Google Cloud</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-solid fa-dharmachakra text-2xl text-indigo-400"></i> Kubernetes</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-solid fa-layer-group text-2xl text-purple-400"></i> Terraform / OpenTofu</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-brands fa-docker text-2xl text-sky-400"></i> Docker</div>
+          <div class="flex items-center gap-2.5 hover:text-white transition"><i class="fa-solid fa-brain text-2xl text-violet-400"></i> NVIDIA AI / vLLM</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PILL-BASED "OUR SERVICES" SECTION (MATCHING SCREENSHOT) ==================== -->
+    <section id="services" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header Matching Screenshot -->
+        <div class="text-left max-w-4xl mb-10">
+          <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Our services</h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            As a trusted Cloud &amp; DevOps partner, we define, execute, and manage your cloud journey, ensuring you are future-ready, efficient, and growth-focused.
+          </p>
+        </div>
+
+        <!-- Interactive Pill Button Tabs (Matching Visual Layout & Style of Screenshot) -->
+        <div class="flex flex-wrap items-center gap-3 sm:gap-3.5 mb-12" id="service-pills-container">
+          
+          <button data-service="strategy" class="service-pill-btn active px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-500/40 bg-[#5025d1] text-white cursor-pointer shadow-md">
+            Cloud Strategy &amp; Consulting
+          </button>
+
+          <button data-service="devops" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            DevOps as a Service
+          </button>
+
+          <button data-service="migration" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            Cloud Migration
+          </button>
+
+          <button data-service="modernization" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            Application Modernization
+          </button>
+
+          <button data-service="native" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            Cloud Native Development
+          </button>
+
+          <button data-service="managed" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            Cloud Managed Services
+          </button>
+
+          <button data-service="sre" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            Site Reliability Engineering
+          </button>
+
+          <button data-service="dr" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer">
+            DR Implementation
+          </button>
+
+          <!-- Core AI Expansion Pillars -->
+          <button data-service="aiops" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer flex items-center gap-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-xs text-purple-400"></i>
+            AIOps &amp; Autonomous Telemetry
+          </button>
+
+          <button data-service="genai" class="service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer flex items-center gap-2">
+            <i class="fa-solid fa-brain text-xs text-cyan-400"></i>
+            Enterprise AI, LLMs &amp; Chatbots
+          </button>
+
+        </div>
+
+        <!-- Dynamic Service Content Card Area -->
+        <div id="service-display-box" class="rounded-3xl bg-slateCard border border-white/10 p-8 sm:p-12 shadow-2xl relative transition-all duration-300">
+          
+          <!-- Content dynamically rendered via JS based on active pill -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-7">
+              <span id="service-tag" class="text-xs font-mono font-bold uppercase tracking-wider text-purple-400 mb-2 block">
+                STRATEGY &amp; GOVERNANCE
+              </span>
+              <h3 id="service-title" class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                Cloud Strategy &amp; Consulting
+              </h3>
+              <p id="service-desc" class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+                Define a high-impact roadmap tailored to business goals. We audit current infrastructure, assess security and compliance readiness, and architect modular multi-account landing zones across AWS, Azure, and Google Cloud with FinOps governance.
+              </p>
+
+              <!-- Feature Bullet Points -->
+              <div id="service-features" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-[#090D1A] border border-white/[0.06]">
+                  <i class="fa-solid fa-circle-check text-purple-400 text-sm"></i>
+                  <span class="text-sm text-slate-200 font-medium">Enterprise Cloud Readiness Assessment</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-[#090D1A] border border-white/[0.06]">
+                  <i class="fa-solid fa-circle-check text-purple-400 text-sm"></i>
+                  <span class="text-sm text-slate-200 font-medium">AWS &amp; Azure Landing Zone Architectures</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-[#090D1A] border border-white/[0.06]">
+                  <i class="fa-solid fa-circle-check text-purple-400 text-sm"></i>
+                  <span class="text-sm text-slate-200 font-medium">FinOps Cloud Cost Optimization</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-[#090D1A] border border-white/[0.06]">
+                  <i class="fa-solid fa-circle-check text-purple-400 text-sm"></i>
+                  <span class="text-sm text-slate-200 font-medium">Zero-Trust &amp; SOC2 Security Governance</span>
+                </div>
+              </div>
+
+              <div class="mt-8 flex items-center gap-4">
+                <a href="#contact" class="px-6 py-3 rounded-full bg-[#5025d1] hover:bg-[#421eb3] text-white font-bold text-sm transition shadow-lg shadow-[#5025d1]/30">
+                  Book Strategy Session
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Tech Illustration Card -->
+            <div class="lg:col-span-5">
+              <div class="p-6 rounded-2xl bg-[#090D1A] border border-white/[0.08] relative">
+                <div class="flex items-center justify-between pb-3 border-b border-white/[0.08] mb-4">
+                  <span id="service-panel-header" class="text-xs font-mono text-purple-300 font-semibold">ARCHITECTURE BLUEPRINT</span>
+                  <span class="text-[10px] font-mono text-emerald-400">READY TO SCALE</span>
+                </div>
+                
+                <div id="service-panel-content" class="space-y-3 font-mono text-xs text-slate-300">
+                  <div class="p-3 rounded-lg bg-slateCard border border-white/[0.04] flex items-center justify-between">
+                    <span>1. Assessment &amp; TCO Discovery</span>
+                    <span class="text-purple-400 font-semibold">Week 1-2</span>
+                  </div>
+                  <div class="p-3 rounded-lg bg-slateCard border border-white/[0.04] flex items-center justify-between">
+                    <span>2. Landing Zone &amp; VPC IaC</span>
+                    <span class="text-purple-400 font-semibold">Week 3-4</span>
+                  </div>
+                  <div class="p-3 rounded-lg bg-slateCard border border-white/[0.04] flex items-center justify-between">
+                    <span>3. Security &amp; Compliance Hardening</span>
+                    <span class="text-purple-400 font-semibold">Week 5</span>
+                  </div>
+                  <div class="p-3 rounded-lg bg-slateCard border border-white/[0.04] flex items-center justify-between">
+                    <span>4. FinOps Cost Guardrails</span>
+                    <span class="text-emerald-400 font-semibold">Automated</span>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-white/[0.08] text-[11px] text-slate-400 flex items-center justify-between">
+                  <span>Stack: Terraform, AWS Organizations, Azure Management</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== AI, AIOPS & GENAI PRACTICE ==================== -->
+    <section id="ai-practice" class="py-24 border-t border-white/[0.08] bg-slateCard/30 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">Enterprise Architectural Pillars</div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Full-Spectrum Cloud & AI Engineering</h2>
-          <p class="mt-4 text-slate-400 text-base sm:text-lg">Modern systems cannot survive on standard virtualization alone. We bridge deep infrastructure engineering with autonomous intelligence.</p>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold mb-3">
+            <i class="fa-solid fa-brain"></i> THE INTELLIGENCE LAYER
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Advanced AIOps &amp; Enterprise GenAI</h2>
+          <p class="mt-4 text-slate-300 text-base sm:text-lg">
+            Empower your infrastructure and engineering teams with autonomous self-healing telemetry, private high-throughput LLMs, and intelligent chatbots.
+          </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <!-- Pillar 1: Hybrid Cloud & IaC -->
-          <div class="p-8 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-cyan-500/50 transition-all duration-300 group hover:-translate-y-1.5 glow-border">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-blue-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
+          <!-- AI Practice 1 -->
+          <div class="p-8 rounded-3xl bg-slateCard border border-white/[0.08] hover:border-purple-500/50 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <span class="text-[11px] font-mono uppercase tracking-wider text-cyan-400 font-semibold block mb-1">FOUNDATION</span>
-            <h3 class="text-2xl font-bold text-white mb-3">Cloud & IaC Architecture</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Autonomous AIOps &amp; SRE</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Deterministic, self-documenting multi-cloud foundations across AWS, Azure, and Google Cloud with OpenTofu and Terraform.
+              Replace late-night manual firefighting with AI-driven incident correlation, anomaly detection, and automated remediation before MTTR SLAs are broken.
             </p>
-            <div class="space-y-2.5 text-xs text-slate-300">
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-cube text-cyan-400"></i> Modular Multi-Account AWS Landing Zones</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-code text-cyan-400"></i> Terraform / OpenTofu / Pulumi IaC Blueprints</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Zero-Trust Network & VPC Peering Architecture</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-money-bill-trend-up text-cyan-400"></i> FinOps Automated Cloud Cost Optimization</div>
-            </div>
+            <ul class="text-xs text-slate-300 space-y-2.5 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> OpenTelemetry Traces, Logs &amp; Metrics</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Prometheus, Grafana &amp; Datadog Setup</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Machine-Learned Root Cause Diagnosis</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i> Self-Healing Kubernetes Auto-Restarts</li>
+            </ul>
           </div>
 
-          <!-- Pillar 2: DevOps, K8s & GitOps -->
-          <div class="p-8 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-violet-500/50 transition-all duration-300 group hover:-translate-y-1.5 glow-border">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-violet-500/20 to-purple-500/10 border border-violet-500/30 text-violet-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-dharmachakra"></i>
+          <!-- AI Practice 2 -->
+          <div class="p-8 rounded-3xl bg-slateCard border border-white/[0.08] hover:border-indigo-500/50 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-microchip"></i>
             </div>
-            <span class="text-[11px] font-mono uppercase tracking-wider text-violet-400 font-semibold block mb-1">VELOCITY</span>
-            <h3 class="text-2xl font-bold text-white mb-3">DevOps & GitOps Delivery</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Enterprise Private LLMs</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Industrial CI/CD pipelines deploying immutable Docker containers into production-hardened Kubernetes clusters.
+              Sovereign, private Large Language Models running on dedicated GPU infrastructure inside your own VPC to prevent sensitive enterprise data leakage.
             </p>
-            <div class="space-y-2.5 text-xs text-slate-300">
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-diagram-project text-violet-400"></i> Multi-Cluster Kubernetes (EKS, AKS, GKE, Rancher)</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-infinity text-violet-400"></i> GitOps Pipelines via ArgoCD & FluxCD</div>
-              <div class="flex items-center gap-2.5"><i class="fa-brands fa-github text-violet-400"></i> GitHub Actions & GitLab CI Pipeline Automation</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-lock text-violet-400"></i> DevSecOps: HashiCorp Vault, Trivy, SonarQube</div>
-            </div>
+            <ul class="text-xs text-slate-300 space-y-2.5 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> vLLM &amp; Ollama Low-Latency Serving</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> NVIDIA H100 / A100 GPU Orchestration</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> Llama 3, Mistral &amp; DeepSeek Deployments</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400"></i> AWQ &amp; GPTQ 4-Bit Weight Quantization</li>
+            </ul>
           </div>
 
-          <!-- Pillar 3: AIOps & Enterprise LLMs -->
-          <div class="p-8 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-1.5 glow-border">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-500/20 to-teal-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-brain"></i>
+          <!-- AI Practice 3 -->
+          <div class="p-8 rounded-3xl bg-slateCard border border-white/[0.08] hover:border-cyan-500/50 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-comments"></i>
             </div>
-            <span class="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-semibold block mb-1">INTELLIGENCE</span>
-            <h3 class="text-2xl font-bold text-white mb-3">AIOps & GenAI Infrastructure</h3>
+            <h3 class="text-2xl font-bold text-white mb-3">Enterprise AI Chatbots &amp; RAG</h3>
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              High-concurrency GPU model hosting, enterprise RAG workflows, private chatbots, and ML-driven autonomous root-cause remediation.
+              Connect your internal knowledge base, Confluence docs, code repositories, and ERPs to intelligent conversational AI agents with verifiable citations.
             </p>
-            <div class="space-y-2.5 text-xs text-slate-300">
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-microchip text-emerald-400"></i> vLLM & Ollama GPU Cloud Orchestration</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-robot text-emerald-400"></i> Enterprise Custom LLM Chatbots & Agents</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-database text-emerald-400"></i> RAG Stacks: LangChain, LlamaIndex & Vector DBs</div>
-              <div class="flex items-center gap-2.5"><i class="fa-solid fa-heart-pulse text-emerald-400"></i> Autonomous Self-Healing AIOps SRE Alerts</div>
-            </div>
+            <ul class="text-xs text-slate-300 space-y-2.5 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Vector Databases (Qdrant, Milvus, Pinecone)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> LangChain &amp; LlamaIndex RAG Workflows</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Secure Slack, Teams &amp; Web Bot Portals</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Role-Based Access Control (RBAC) Filtering</li>
+            </ul>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== AIOPS & OBSERVABILITY DEEP-DIVE ==================== -->
-    <section id="aiops" class="py-24 border-t border-white/[0.08] bg-slate-900/40 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-violet-500/10 border border-violet-500/30 text-violet-400 text-xs font-mono mb-4">
-              <i class="fa-solid fa-wand-magic-sparkles"></i> AUTONOMOUS TELEMETRY
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-              Shift From Reactive Incident Response to <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">Autonomous AIOps</span>
-            </h2>
-            <p class="mt-4 text-slate-300 text-base leading-relaxed">
-              When production incidents occur at 3:00 AM, our AI-driven telemetry doesn't just wake up engineers with false alarms. It runs real-time root-cause analysis, triggers self-healing workflows, and auto-scales infrastructure before users notice degradation.
-            </p>
-
-            <div class="mt-8 space-y-4">
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-cyber-card border border-white/[0.06]">
-                <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0 text-lg">
-                  <i class="fa-solid fa-wave-square"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold text-sm">Full-Stack OpenTelemetry Instrumentation</h4>
-                  <p class="text-xs text-slate-400 mt-1">Unified distributed tracing, metrics, and application logs aggregated via Prometheus, Grafana, Datadog, and Dynatrace.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-cyber-card border border-white/[0.06]">
-                <div class="w-10 h-10 rounded-lg bg-violet-500/10 text-violet-400 flex items-center justify-center shrink-0 text-lg">
-                  <i class="fa-solid fa-code-fork"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold text-sm">Automated Machine Root-Cause Attribution</h4>
-                  <p class="text-xs text-slate-400 mt-1">Correlation models pinpoint exactly which commit, database lock, or misconfigured ingress route triggered service degradation.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-xl bg-cyber-card border border-white/[0.06]">
-                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 text-lg">
-                  <i class="fa-solid fa-rotate"></i>
-                </div>
-                <div>
-                  <h4 class="text-white font-bold text-sm">Automated Self-Healing Clusters</h4>
-                  <p class="text-xs text-slate-400 mt-1">Self-triggering rollbacks, ephemeral container recycling, and automated traffic diversion before MTTR SLAs are breached.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Visual Telemetry Card -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-cyber-card border border-white/10 glow-violet relative">
-            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-              <div class="flex items-center gap-3">
-                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></span>
-                <span class="text-sm font-bold text-white tracking-wide">AIOps Autonomous Controller</span>
-              </div>
-              <span class="text-xs font-mono text-cyan-400">Cluster: prod-us-east-k8s</span>
-            </div>
-
-            <!-- Pipeline Simulation Diagram -->
-            <div class="space-y-4 font-mono text-xs">
-              <div class="p-3.5 rounded-lg bg-cyber-black/80 border border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-satellite-dish text-cyan-400"></i>
-                  <span>1. Ingestion: OpenTelemetry Agents</span>
-                </div>
-                <span class="text-emerald-400 font-bold">128k evt/sec</span>
-              </div>
-
-              <div class="p-3.5 rounded-lg bg-cyber-black/80 border border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-filter text-violet-400"></i>
-                  <span>2. ML Anomaly Detection Model</span>
-                </div>
-                <span class="text-violet-300 font-bold">0.02ms latency</span>
-              </div>
-
-              <div class="p-3.5 rounded-lg bg-cyber-black/80 border border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-circle-nodes text-yellow-400"></i>
-                  <span>3. Root-Cause Causal Graph</span>
-                </div>
-                <span class="text-yellow-400 font-bold">Auto-Isolated</span>
-              </div>
-
-              <div class="p-3.5 rounded-lg bg-emerald-950/40 border border-emerald-500/40 flex items-center justify-between text-emerald-300">
-                <div class="flex items-center gap-3">
-                  <i class="fa-solid fa-shield-check text-emerald-400"></i>
-                  <span>4. Remediation Dispatch (Zero-Human)</span>
-                </div>
-                <span class="font-bold uppercase tracking-wider text-[11px] bg-emerald-500/20 px-2 py-0.5 rounded">Remediated</span>
-              </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
-              <span>Overall MTTR Reduction: <strong class="text-emerald-400">74%</strong></span>
-              <span>Incident Noise Filtered: <strong class="text-cyan-400">92%</strong></span>
-            </div>
-          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== GENAI, ENTERPRISE LLMS & AI CHATBOTS ==================== -->
-    <section id="genai" class="py-24 border-t border-white/[0.08] relative">
+    <!-- ==================== METHODOLOGY & LIFECYCLE (CICD Tech Style) ==================== -->
+    <section id="process" class="py-24 border-t border-white/[0.08] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="text-xs font-mono uppercase tracking-widest text-violet-400 font-bold mb-3">Generative AI Productionization</div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Private LLMs & Enterprise AI Chatbots</h2>
-          <p class="mt-4 text-slate-400 text-base sm:text-lg">Don't leak proprietary company data to public endpoints. We deploy sovereign, private Large Language Models, agentic chatbots, and fine-tuning clusters inside your secure VPC.</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5025d1]/15 border border-[#5025d1]/30 text-purple-300 text-xs font-mono font-bold mb-3">
+            <i class="fa-solid fa-diagram-project"></i> BATTLE-TESTED PLAYBOOK
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Our 4-Stage DevOps &amp; AI Delivery Lifecycle</h2>
+          <p class="mt-4 text-slate-400 text-base sm:text-lg">
+            A proven framework modeled on industry-leading engineering standards to turn software delivery into a competitive advantage.
+          </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
           
-          <div class="p-6 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-violet-500/40 transition">
-            <div class="w-12 h-12 rounded-xl bg-violet-500/10 text-violet-400 flex items-center justify-center text-xl mb-4">
-              <i class="fa-solid fa-microchip"></i>
+          <div class="p-6 rounded-2xl bg-slateCard border border-white/[0.06] hover:border-purple-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 font-mono font-bold flex items-center justify-center text-sm mb-4">
+              01
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">GPU Cluster Orchestration</h3>
+            <h4 class="text-lg font-bold text-white mb-2">Assess &amp; Architect</h4>
             <p class="text-xs text-slate-400 leading-relaxed">
-              Deploy and scale NVIDIA H100, A100, and L40S clusters using Ray, Slurm, and Kubernetes for cost-optimized training and high-throughput inference.
+              In-depth audit of cloud security posture, pipeline friction, architecture bottlenecks, and GPU/compute cost leaks.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-cyan-500/40 transition">
-            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
-              <i class="fa-solid fa-bolt-lightning"></i>
+          <div class="p-6 rounded-2xl bg-slateCard border border-white/[0.06] hover:border-purple-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 font-mono font-bold flex items-center justify-center text-sm mb-4">
+              02
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">vLLM & Fast Model Serving</h3>
+            <h4 class="text-lg font-bold text-white mb-2">Automate with IaC</h4>
             <p class="text-xs text-slate-400 leading-relaxed">
-              Ultra-low latency open-source LLM hosting (Llama 3, Mistral, DeepSeek, Qwen) utilizing vLLM, TensorRT-LLM, and Ollama for private enterprise inference.
+              Codify every server, network subnet, and Kubernetes cluster into modular Terraform/OpenTofu configurations.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-emerald-500/40 transition">
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
-              <i class="fa-solid fa-comments"></i>
+          <div class="p-6 rounded-2xl bg-slateCard border border-white/[0.06] hover:border-purple-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 font-mono font-bold flex items-center justify-center text-sm mb-4">
+              03
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Custom AI Chatbots & RAG</h3>
+            <h4 class="text-lg font-bold text-white mb-2">Continuous GitOps CI/CD</h4>
             <p class="text-xs text-slate-400 leading-relaxed">
-              Enterprise Retrieval-Augmented Generation connecting your internal Confluence, Notion, Git repos, and SQL databases to intelligent private chatbots.
+              Automate code check-in to zero-downtime Canary or Blue-Green production deployments with ArgoCD and GitHub Actions.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-cyber-card border border-white/[0.08] hover:border-pink-500/40 transition">
-            <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl mb-4">
-              <i class="fa-solid fa-sliders"></i>
+          <div class="p-6 rounded-2xl bg-slateCard border border-white/[0.06] hover:border-purple-500/40 transition">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 font-mono font-bold flex items-center justify-center text-sm mb-4">
+              04
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Fine-Tuning & Quantization</h3>
+            <h4 class="text-lg font-bold text-white mb-2">AIOps &amp; SRE Guard</h4>
             <p class="text-xs text-slate-400 leading-relaxed">
-              LoRA, QLoRA, and AWQ/GPTQ weight quantization workflows to customize frontier models to your internal domain while slashing compute expenditure by 70%.
+              24/7 AI-driven observability, automated self-healing, predictive capacity scaling, and continuous FinOps auditing.
             </p>
           </div>
 
@@ -523,174 +555,88 @@
       </div>
     </section>
 
-    <!-- ==================== FILTERABLE TECH STACK MATRIX ==================== -->
-    <section id="stack" class="py-24 border-t border-white/[0.08] bg-slate-900/20 relative">
+    <!-- ==================== TECH MATRIX ==================== -->
+    <section id="stack" class="py-24 border-t border-white/[0.08] bg-slateCard/20 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <div class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold mb-3">Enterprise Battle-Tested Stack</div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Full-Spectrum Cloud & AI Toolchain</h2>
-          <p class="mt-4 text-slate-400 text-sm sm:text-base">Click category filters to explore the technologies we deploy, integrate, and support daily.</p>
-          
-          <!-- Category Filters -->
-          <div class="mt-8 flex flex-wrap items-center justify-center gap-2" id="tech-filter-group">
-            <button class="tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-bold bg-cyan-500 text-slate-950 transition" data-filter="all">All Stack (24+)</button>
-            <button class="tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium text-slate-400 bg-cyber-card border border-white/10 hover:text-white transition" data-filter="cloud">Cloud & IaC</button>
-            <button class="tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium text-slate-400 bg-cyber-card border border-white/10 hover:text-white transition" data-filter="devops">DevOps & GitOps</button>
-            <button class="tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium text-slate-400 bg-cyber-card border border-white/10 hover:text-white transition" data-filter="aiops">AIOps & Observability</button>
-            <button class="tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium text-slate-400 bg-cyber-card border border-white/10 hover:text-white transition" data-filter="genai">GenAI & LLMs</button>
-          </div>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="text-xs font-mono uppercase tracking-widest text-purple-400 font-bold mb-3">Competency Hub</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Technologies We Deliver In Production</h2>
+          <p class="mt-4 text-slate-400 text-sm sm:text-base">Modern engineering teams require deep mastery across cloud hyperscalers, orchestrators, and AI runtimes.</p>
         </div>
 
-        <!-- Tech Grid Items -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="tech-grid">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           
-          <!-- Cloud -->
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-brands fa-aws text-3xl text-amber-500 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">AWS Cloud</span>
-            <span class="text-[10px] text-slate-400 font-mono">EKS, S3, RDS, IAM</span>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-brands fa-aws text-3xl text-amber-500 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">Amazon Web Services</span>
+            <span class="text-[10px] text-slate-400 font-mono">EKS, RDS, S3, IAM</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-brands fa-microsoft text-3xl text-blue-400 group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-brands fa-microsoft text-3xl text-blue-400 mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">Microsoft Azure</span>
             <span class="text-[10px] text-slate-400 font-mono">AKS, VNet, Blob</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-brands fa-google text-3xl text-rose-400 group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-brands fa-google text-3xl text-rose-400 mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">Google Cloud</span>
-            <span class="text-[10px] text-slate-400 font-mono">GKE, Anthos, Vertex</span>
+            <span class="text-[10px] text-slate-400 font-mono">GKE, BigQuery, Vertex</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-solid fa-layer-group text-3xl text-purple-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Terraform</span>
-            <span class="text-[10px] text-slate-400 font-mono">Infrastructure as Code</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-solid fa-code text-3xl text-yellow-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">OpenTofu</span>
-            <span class="text-[10px] text-slate-400 font-mono">Open Source IaC</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="cloud">
-            <i class="fa-solid fa-terminal text-3xl text-red-500 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Ansible</span>
-            <span class="text-[10px] text-slate-400 font-mono">Config Automation</span>
-          </div>
-
-          <!-- DevOps -->
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-brands fa-docker text-3xl text-sky-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Docker</span>
-            <span class="text-[10px] text-slate-400 font-mono">Containerization</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-solid fa-dharmachakra text-3xl text-blue-500 group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-dharmachakra text-3xl text-indigo-400 mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">Kubernetes</span>
-            <span class="text-[10px] text-slate-400 font-mono">Orchestration</span>
+            <span class="text-[10px] text-slate-400 font-mono">Container Mesh</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-brands fa-github text-3xl text-white group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-layer-group text-3xl text-purple-400 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">Terraform &amp; OpenTofu</span>
+            <span class="text-[10px] text-slate-400 font-mono">Modular IaC</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-brands fa-docker text-3xl text-sky-400 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">Docker</span>
+            <span class="text-[10px] text-slate-400 font-mono">Immutable Images</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-brands fa-github text-3xl text-white mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">GitHub Actions</span>
             <span class="text-[10px] text-slate-400 font-mono">CI/CD Automation</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-brands fa-gitlab text-3xl text-orange-500 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">GitLab CI</span>
-            <span class="text-[10px] text-slate-400 font-mono">Pipeline Orchestration</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-solid fa-anchor text-3xl text-pink-400 group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-anchor text-3xl text-pink-400 mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">ArgoCD</span>
             <span class="text-[10px] text-slate-400 font-mono">Declarative GitOps</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="devops">
-            <i class="fa-solid fa-helmet-un text-3xl text-indigo-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Helm Charts</span>
-            <span class="text-[10px] text-slate-400 font-mono">K8s Package Manager</span>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-chart-line text-3xl text-orange-400 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">Grafana &amp; Prometheus</span>
+            <span class="text-[10px] text-slate-400 font-mono">Full-Stack Observability</span>
           </div>
 
-          <!-- AIOps & Observability -->
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-fire-flame-curved text-3xl text-orange-500 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Prometheus</span>
-            <span class="text-[10px] text-slate-400 font-mono">Metrics Scraper</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-chart-line text-3xl text-orange-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Grafana</span>
-            <span class="text-[10px] text-slate-400 font-mono">Dashboard Visualizer</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-dog text-3xl text-purple-400 group-hover:scale-110 transition-transform block mb-2"></i>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-dog text-3xl text-purple-400 mb-2 block group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold text-white block">Datadog</span>
-            <span class="text-[10px] text-slate-400 font-mono">APM & Cloud Monitor</span>
+            <span class="text-[10px] text-slate-400 font-mono">APM &amp; Synthetic SRE</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-telescope text-3xl text-cyan-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">OpenTelemetry</span>
-            <span class="text-[10px] text-slate-400 font-mono">Unified Tracing</span>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-bolt text-3xl text-yellow-300 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">vLLM &amp; Ollama</span>
+            <span class="text-[10px] text-slate-400 font-mono">Private LLM Serving</span>
           </div>
 
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-chart-pie text-3xl text-blue-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Dynatrace</span>
-            <span class="text-[10px] text-slate-400 font-mono">Davis AI Engine</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="aiops">
-            <i class="fa-solid fa-bell text-3xl text-emerald-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">PagerDuty / Opsgenie</span>
-            <span class="text-[10px] text-slate-400 font-mono">Escalation & On-Call</span>
-          </div>
-
-          <!-- GenAI & LLM Infra -->
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-bolt text-3xl text-yellow-300 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">vLLM Engine</span>
-            <span class="text-[10px] text-slate-400 font-mono">PagedAttention Infra</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-brain text-3xl text-violet-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Ollama</span>
-            <span class="text-[10px] text-slate-400 font-mono">On-Premises LLM Host</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-link text-3xl text-emerald-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">LangChain & LlamaIndex</span>
-            <span class="text-[10px] text-slate-400 font-mono">RAG & Agent Chaining</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-cubes text-3xl text-pink-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Qdrant / Milvus</span>
-            <span class="text-[10px] text-slate-400 font-mono">Vector Embeddings DB</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-sun text-3xl text-amber-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">Ray Distributed</span>
-            <span class="text-[10px] text-slate-400 font-mono">Multi-GPU Clustering</span>
-          </div>
-
-          <div class="tech-item p-4 rounded-xl bg-cyber-card border border-white/[0.06] hover:border-cyan-500/40 text-center transition group" data-category="genai">
-            <i class="fa-solid fa-microchip text-3xl text-green-400 group-hover:scale-110 transition-transform block mb-2"></i>
-            <span class="text-xs font-bold text-white block">NVIDIA Triton</span>
-            <span class="text-[10px] text-slate-400 font-mono">High-Load Inference</span>
+          <div class="p-5 rounded-2xl bg-slateCard border border-white/[0.06] text-center hover:border-purple-500/40 transition group">
+            <i class="fa-solid fa-link text-3xl text-emerald-400 mb-2 block group-hover:scale-110 transition-transform"></i>
+            <span class="text-xs font-bold text-white block">LangChain &amp; Qdrant</span>
+            <span class="text-[10px] text-slate-400 font-mono">Vector RAG Agents</span>
           </div>
 
         </div>
@@ -698,189 +644,223 @@
       </div>
     </section>
 
-    <!-- ==================== INTERACTIVE AI DEVOPS COPILOT PLAYGROUND ==================== -->
-    <section id="copilot" class="py-24 border-t border-white/[0.08] relative">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ==================== WHY CHOOSE MYKA CLOUD TECH ==================== -->
+    <section id="why-us" class="py-24 border-t border-white/[0.08] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-medium mb-3">
-            <i class="fa-solid fa-robot"></i> LIVE INTERACTIVE COPILOT
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Experience Myka Autonomous AI Agent</h2>
-          <p class="mt-3 text-slate-400 text-sm">Select any real-world production situation below to test how our AI DevOps copilot parses logs, generates infrastructure code, and optimizes architecture in real time.</p>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold mb-3">
+              <i class="fa-solid fa-award"></i> WHY MYKA CLOUD TECH
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+              Enterprise Rigor. Agile Startup Velocity.
+            </h2>
+            <p class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+              We don't merely provide outsourced hands; we function as senior principal architects and SREs who take ownership of uptime, deployment velocity, and cost governance.
+            </p>
 
-        <div class="rounded-2xl bg-cyber-card border border-white/10 glow-cyan overflow-hidden backdrop-blur-xl">
-          
-          <!-- Quick Prompt Triggers -->
-          <div class="p-4 sm:p-5 bg-slate-900/80 border-b border-white/10">
-            <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-3 font-semibold">Test Sample Engineering Prompts:</span>
-            <div class="flex flex-wrap gap-2" id="copilot-prompts">
-              <button data-type="k8s" class="copilot-btn px-3 py-1.5 rounded-lg bg-cyber-black text-cyan-400 border border-cyan-500/40 hover:bg-cyan-500 hover:text-slate-950 text-xs font-mono transition flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-exclamation"></i> K8s CrashLoopBackOff Diagnosis
-              </button>
-              <button data-type="terraform" class="copilot-btn px-3 py-1.5 rounded-lg bg-cyber-black text-slate-300 border border-white/10 hover:border-violet-500 hover:text-white text-xs font-mono transition flex items-center gap-1.5">
-                <i class="fa-solid fa-cube"></i> Generate Multi-AZ AWS VPC (IaC)
-              </button>
-              <button data-type="rag" class="copilot-btn px-3 py-1.5 rounded-lg bg-cyber-black text-slate-300 border border-white/10 hover:border-emerald-500 hover:text-white text-xs font-mono transition flex items-center gap-1.5">
-                <i class="fa-solid fa-brain"></i> Enterprise Internal RAG Architecture
-              </button>
-              <button data-type="finops" class="copilot-btn px-3 py-1.5 rounded-lg bg-cyber-black text-slate-300 border border-white/10 hover:border-amber-500 hover:text-white text-xs font-mono transition flex items-center gap-1.5">
-                <i class="fa-solid fa-dollar-sign"></i> Slash GPU Cloud Bill (FinOps)
-              </button>
+            <div class="mt-8 space-y-4">
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slateCard border border-white/[0.06]">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 text-lg">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">Security &amp; Compliance by Default</h4>
+                  <p class="text-xs text-slate-400 mt-1">SOC2, HIPAA, and CIS-hardened configurations baked straight into every Terraform and Kubernetes manifest.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slateCard border border-white/[0.06]">
+                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 text-lg">
+                  <i class="fa-solid fa-code-compare"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">Zero Vendor Lock-in</h4>
+                  <p class="text-xs text-slate-400 mt-1">We utilize open-source frameworks (OpenTofu, Docker, Kubernetes, Helm) so you retain 100% ownership of your infrastructure code.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-4 rounded-2xl bg-slateCard border border-white/[0.06]">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0 text-lg">
+                  <i class="fa-solid fa-stopwatch"></i>
+                </div>
+                <div>
+                  <h4 class="text-white font-bold text-sm">Predictable SLAs &amp; 24/7 Managed SRE</h4>
+                  <p class="text-xs text-slate-400 mt-1">Guaranteed 15-minute response times for critical production alerts with continuous AIOps monitoring.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Chat Conversation Window -->
-          <div class="p-6 min-h-[340px] max-h-[500px] overflow-y-auto space-y-6" id="chat-stream-window">
-            
-            <!-- Agent Welcome Message -->
-            <div class="flex items-start gap-3.5">
-              <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shrink-0 text-slate-950 font-bold text-xs">
-                AI
+          <!-- Highlight Metric Comparison Box -->
+          <div class="p-8 sm:p-10 rounded-3xl bg-slateCard border border-white/10 shadow-2xl relative">
+            <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-purple-400"></i> The Myka Impact Factor
+            </h3>
+
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Deployment Frequency</span>
+                  <span class="text-purple-400 font-mono">From Monthly &rarr; Multiple Per Day</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-[#090D1A] overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-[#5025d1] to-cyan-400 rounded-full" style="width: 95%"></div>
+                </div>
               </div>
-              <div class="bg-slate-900 border border-white/10 rounded-2xl rounded-tl-none p-4 max-w-2xl text-xs sm:text-sm text-slate-300 leading-relaxed shadow-md">
-                <p class="font-bold text-cyan-400 mb-1 flex items-center gap-1.5">
-                  <i class="fa-solid fa-terminal"></i> Myka Cloud & AIOps Copilot
-                </p>
-                Hello! I am your Autonomous Cloud & DevOps engineer. Click one of the test scenarios above, or watch how our models parse complex Kubernetes, IaC, and AIOps incidents.
+
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Mean Time to Recovery (MTTR)</span>
+                  <span class="text-emerald-400 font-mono">Reduced by 75%</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-[#090D1A] overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-semibold mb-2">
+                  <span class="text-slate-300">Cloud &amp; GPU Spend Efficiency</span>
+                  <span class="text-cyan-400 font-mono">35% - 50% FinOps Savings</span>
+                </div>
+                <div class="w-full h-2.5 rounded-full bg-[#090D1A] overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full" style="width: 90%"></div>
+                </div>
               </div>
             </div>
 
-            <!-- Dynamic Messages will render here -->
+            <div class="mt-8 p-4 rounded-xl bg-[#090D1A] border border-white/[0.06] flex items-center justify-between">
+              <span class="text-xs text-slate-400">Production Code Delivery</span>
+              <span class="text-xs font-mono text-purple-300 font-bold">100% Automated GitOps</span>
+            </div>
           </div>
-
-          <!-- Chat Status Bar -->
-          <div class="px-6 py-3 bg-cyber-black/90 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-500">
-            <span class="flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Connected to vLLM Private Inference Endpoint
-            </span>
-            <span>Latency: <strong class="text-cyan-400 font-semibold">14ms</strong></span>
-          </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== ENTERPRISE CONTACT & WEB3FORMS ENQUIRY ==================== -->
-    <section id="contact" class="py-24 border-t border-white/[0.08] relative bg-slate-950/60">
+    <!-- ==================== ENTERPRISE CONTACT FORM (WEB3FORMS WIRED) ==================== -->
+    <section id="contact" class="py-24 border-t border-white/[0.08] bg-slateCard/40 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          <!-- Contact Left Info -->
+          <!-- Contact Left Content -->
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-medium mb-4">
-              <i class="fa-solid fa-bolt"></i> GET IN TOUCH
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono font-bold mb-3">
+              <i class="fa-solid fa-paper-plane"></i> DIRECT CONSULTATION
             </div>
             <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-              Ready to Upgrade to <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-400 to-violet-400">Autonomous Cloud & AIOps?</span>
+              Let's Engineer Your Next Leap Forward
             </h2>
-            <p class="mt-6 text-slate-300 text-base leading-relaxed">
-              Whether you need to migrate production to multi-cloud Kubernetes, implement Infrastructure as Code, set up autonomous self-healing SRE pipelines, or deploy private AI models—our principal architects are here to help.
+            <p class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+              Connect directly with our cloud and DevOps architects. We assess your environment, review security baselines, and propose pragmatic execution phases.
             </p>
 
-            <div class="mt-10 space-y-6">
+            <div class="mt-10 space-y-5">
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-cyber-card border border-white/10 flex items-center justify-center text-cyan-400 text-lg">
+                <div class="w-12 h-12 rounded-xl bg-slateCard border border-white/10 flex items-center justify-center text-purple-400 text-lg">
                   <i class="fa-solid fa-building-columns"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Registered Enterprise</div>
+                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Company Entity</div>
                   <div class="text-base font-bold text-white">Myka Cloud Tech Pvt Ltd</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-cyber-card border border-white/10 flex items-center justify-center text-cyan-400 text-lg">
-                  <i class="fa-solid fa-envelope-open-text"></i>
+                <div class="w-12 h-12 rounded-xl bg-slateCard border border-white/10 flex items-center justify-center text-purple-400 text-lg">
+                  <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div>
                   <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Email Desk</div>
-                  <div class="text-base font-bold text-white">contact@mykacloud.com.com</div>
+                  <div class="text-base font-bold text-white">contact@mykacloud.com</div>
                 </div>
               </div>
 
               <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-cyber-card border border-white/10 flex items-center justify-center text-cyan-400 text-lg">
-                  <i class="fa-solid fa-location-dot"></i>
+                <div class="w-12 h-12 rounded-xl bg-slateCard border border-white/10 flex items-center justify-center text-purple-400 text-lg">
+                  <i class="fa-solid fa-map-location-dot"></i>
                 </div>
                 <div>
-                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Headquarters & Engineering</div>
-                  <div class="text-base font-bold text-white">India (Serving Global Enterprise Clients)</div>
+                  <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Global Operations</div>
+                  <div class="text-base font-bold text-white">India • Serving Enterprise Clients Worldwide</div>
                 </div>
               </div>
             </div>
 
-            <!-- Guarantee Box -->
-            <div class="mt-10 p-5 rounded-2xl bg-cyan-950/20 border border-cyan-500/20">
-              <div class="flex items-center gap-2 text-cyan-400 text-sm font-bold mb-1">
-                <i class="fa-solid fa-certificate"></i> Enterprise SLA & Security Confidentiality
+            <div class="mt-10 p-5 rounded-2xl bg-purple-950/20 border border-purple-500/20">
+              <div class="text-xs text-purple-300 font-bold mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-lock"></i> Strict NDA &amp; Security Assurance
               </div>
               <p class="text-xs text-slate-400 leading-relaxed">
-                All client architectural audits and infrastructure codebase discussions are governed by strict mutual NDAs and SOC2 Type II compliance frameworks.
+                All architectural inquiries and infrastructure logs discussed with Myka Cloud Tech Pvt Ltd are protected under non-disclosure confidentiality agreements.
               </p>
             </div>
           </div>
 
-          <!-- Working Enquiry Form with Web3Forms -->
-          <div class="p-8 sm:p-10 rounded-3xl bg-cyber-card border border-white/10 glow-border shadow-2xl relative">
-            <h3 class="text-2xl font-bold text-white mb-2">Initiate Architecture Consultation</h3>
-            <p class="text-xs text-slate-400 mb-8">Fill in your requirements below. Emails are securely sent directly to our principal cloud architects.</p>
+          <!-- Form Wired to Web3Forms -->
+          <div class="p-8 sm:p-10 rounded-3xl bg-slateCard border border-white/10 shadow-2xl relative">
+            <h3 class="text-2xl font-bold text-white mb-2">Request an Architecture Consultation</h3>
+            <p class="text-xs text-slate-400 mb-8">Fill out the form below. Messages are routed directly to our principal cloud architects.</p>
 
             <form id="enquiry-form" class="space-y-4">
               <!-- Web3Forms Access Key: Replace with your actual key from web3forms.com -->
-              <input type="hidden" name="access_key" value="afcbc080-f8a0-4e16-a08c-7151ed4f38c2" />
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
               <input type="hidden" name="subject" value="New Enterprise Inquiry - Myka Cloud Tech" />
               <input type="hidden" name="from_name" value="Myka Cloud Tech Portal" />
 
               <div>
-                <label for="name" class="block text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mb-1.5">Full Name *</label>
+                <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Full Name *</label>
                 <input type="text" id="name" name="name" required placeholder="e.g. Alex Morgan"
-                  class="w-full px-4 py-3 rounded-xl bg-cyber-black/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition" />
+                  class="w-full px-4 py-3 rounded-xl bg-[#090D1A] border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 text-sm transition" />
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="email" class="block text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mb-1.5">Business Email *</label>
+                  <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Work Email *</label>
                   <input type="email" id="email" name="email" required placeholder="alex@company.com"
-                    class="w-full px-4 py-3 rounded-xl bg-cyber-black/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition" />
+                    class="w-full px-4 py-3 rounded-xl bg-[#090D1A] border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 text-sm transition" />
                 </div>
                 <div>
-                  <label for="company" class="block text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mb-1.5">Company Name</label>
-                  <input type="text" id="company" name="company" placeholder="Acme Technologies Ltd"
-                    class="w-full px-4 py-3 rounded-xl bg-cyber-black/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition" />
+                  <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Phone / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000"
+                    class="w-full px-4 py-3 rounded-xl bg-[#090D1A] border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 text-sm transition" />
                 </div>
               </div>
 
               <div>
-                <label for="service" class="block text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mb-1.5">Primary Focus Area</label>
+                <label for="service" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Required Service Pillar</label>
                 <select id="service" name="service"
-                  class="w-full px-4 py-3 rounded-xl bg-cyber-black/80 border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition">
-                  <option value="AIOps & Observability Automation">AIOps & Observability Automation (Prometheus / Grafana / Datadog)</option>
-                  <option value="Enterprise GenAI & Private LLM Deployment">Enterprise GenAI & Private LLM Deployment (vLLM / RAG / GPUs)</option>
-                  <option value="Cloud Architecture & Zero-Downtime Migration">Cloud Architecture & Zero-Downtime Migration (AWS / Azure / GCP)</option>
-                  <option value="DevOps & GitOps Pipelines (Kubernetes / ArgoCD)">DevOps & GitOps Pipelines (Kubernetes / ArgoCD / Helm)</option>
-                  <option value="Infrastructure as Code (Terraform / OpenTofu)">Infrastructure as Code (Terraform / OpenTofu / Ansible)</option>
-                  <option value="Cloud Cost Optimization & FinOps Audit">Cloud Cost Optimization & FinOps Audit</option>
-                  <option value="End-to-End Enterprise Consultation">Comprehensive End-to-End Consultation</option>
+                  class="w-full px-4 py-3 rounded-xl bg-[#090D1A] border border-white/10 text-white text-sm focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 transition">
+                  <option value="Cloud Strategy & Consulting">Cloud Strategy &amp; Consulting</option>
+                  <option value="DevOps as a Service (CI/CD, IaC)">DevOps as a Service (CI/CD, IaC, K8s)</option>
+                  <option value="Cloud Migration (AWS/Azure/GCP)">Cloud Migration (Zero-Downtime)</option>
+                  <option value="Application Modernization">Application Modernization (Microservices)</option>
+                  <option value="Cloud Native Development">Cloud Native Development</option>
+                  <option value="Cloud Managed Services">Cloud Managed Services</option>
+                  <option value="Site Reliability Engineering (SRE)">Site Reliability Engineering (SRE)</option>
+                  <option value="DR Implementation & DevSecOps">DR Implementation &amp; DevSecOps</option>
+                  <option value="AIOps & Autonomous Observability">AIOps &amp; Autonomous Observability</option>
+                  <option value="Enterprise AI, LLMs & Chatbots">Enterprise AI, LLMs &amp; Chatbots</option>
                 </select>
               </div>
 
               <div>
-                <label for="message" class="block text-xs font-mono uppercase tracking-wider text-slate-300 font-semibold mb-1.5">Architecture Scope & Requirements *</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Describe your current cloud footprint, existing pain points (e.g. deployment speed, MTTR, cloud bills, LLM requirements), and timeline..."
-                  class="w-full px-4 py-3 rounded-xl bg-cyber-black/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-sm transition"></textarea>
+                <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Project Scope / Requirements *</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your current infrastructure setup, cloud providers, timeline, and key challenges..."
+                  class="w-full px-4 py-3 rounded-xl bg-[#090D1A] border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400 text-sm transition"></textarea>
               </div>
 
               <button type="submit" id="submit-btn"
-                class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-extrabold text-sm transition-all duration-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 flex items-center justify-center gap-2 cursor-pointer">
+                class="w-full py-4 px-6 rounded-xl bg-[#5025d1] hover:bg-[#421eb3] text-white font-bold text-sm transition-all duration-300 shadow-xl shadow-[#5025d1]/35 hover:shadow-[#5025d1]/50 flex items-center justify-center gap-2 cursor-pointer">
                 <span>Submit Strategy Request</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
 
-              <!-- Real-time Status / Feedback Container -->
+              <!-- Live Submission Feedback Box -->
               <div id="form-status" class="hidden text-xs font-mono p-4 rounded-xl text-center mt-3 leading-relaxed"></div>
             </form>
           </div>
@@ -891,28 +871,28 @@
     </section>
   </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="border-t border-white/[0.08] bg-cyber-black py-12 text-xs text-slate-400 font-mono">
+  <!-- ==================== CORPORATE FOOTER ==================== -->
+  <footer class="border-t border-white/[0.08] bg-[#060913] py-12 text-xs text-slate-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/[0.06]">
         
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-violet-600 flex items-center justify-center text-slate-950 font-bold">
+          <div class="w-9 h-9 rounded-xl bg-[#5025d1] flex items-center justify-center text-white font-bold">
             <i class="fa-solid fa-cloud"></i>
           </div>
           <div>
-            <span class="font-bold text-white text-sm">Myka Cloud Tech Pvt Ltd</span>
-            <span class="text-slate-500 block text-[10px]">Autonomous Cloud • AIOps • Enterprise GenAI</span>
+            <span class="font-bold text-white text-sm block">Myka Cloud Tech Pvt Ltd</span>
+            <span class="text-slate-500 text-[11px]">Cloud • DevOps • AI Solutions Partner</span>
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-6 text-slate-400">
-          <a href="#services" class="hover:text-cyan-400 transition">Core Pillars</a>
-          <a href="#aiops" class="hover:text-cyan-400 transition">AIOps Telemetry</a>
-          <a href="#genai" class="hover:text-cyan-400 transition">GenAI & LLMs</a>
-          <a href="#stack" class="hover:text-cyan-400 transition">Tech Matrix</a>
-          <a href="#copilot" class="hover:text-cyan-400 transition">Copilot Demo</a>
-          <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+        <div class="flex flex-wrap items-center gap-6 text-slate-400 font-medium">
+          <a href="#services" class="hover:text-white transition">Services</a>
+          <a href="#ai-practice" class="hover:text-white transition">AIOps &amp; GenAI</a>
+          <a href="#process" class="hover:text-white transition">Methodology</a>
+          <a href="#stack" class="hover:text-white transition">Tech Stack</a>
+          <a href="#why-us" class="hover:text-white transition">Why Us</a>
+          <a href="#contact" class="hover:text-white transition">Contact</a>
         </div>
       </div>
 
@@ -920,21 +900,20 @@
         <div>
           &copy; <span id="current-year"></span> Myka Cloud Tech Pvt Ltd. All rights reserved.
         </div>
-        <div class="flex items-center gap-4">
-          <span class="text-emerald-400 flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span> Global Ingress 100% Operational
-          </span>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block"></span>
+          <span class="text-slate-400">All Systems &amp; Ingress 100% Operational</span>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== JAVASCRIPT ==================== -->
+  <!-- ==================== INTERACTIVE JAVASCRIPT ==================== -->
   <script>
     // 1. Current Year
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    // 2. Mobile Nav Toggle
+    // 2. Mobile Drawer Navigation Toggle
     const mobileBtn = document.getElementById('mobile-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -949,152 +928,250 @@
       });
     });
 
-    // 3. Hero Terminal Tab Switcher
-    const terminalTabs = document.querySelectorAll('.term-tab');
-    const terminalViews = {
-      aiops: document.getElementById('term-view-aiops'),
-      k8s: document.getElementById('term-view-k8s'),
-      terraform: document.getElementById('term-view-terraform'),
-      llm: document.getElementById('term-view-llm')
-    };
-
-    terminalTabs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.getAttribute('data-tab');
-        
-        terminalTabs.forEach(t => {
-          t.className = 'term-tab px-3 py-1 text-xs font-mono rounded-md text-slate-400 hover:text-white transition';
-        });
-        btn.className = 'term-tab px-3 py-1 text-xs font-mono rounded-md bg-cyan-500 text-slate-950 font-bold transition';
-
-        Object.keys(terminalViews).forEach(key => {
-          if (key === target) {
-            terminalViews[key].classList.remove('hidden');
-          } else {
-            terminalViews[key].classList.add('hidden');
-          }
-        });
-      });
-    });
-
-    // 4. Tech Matrix Filter
-    const filterButtons = document.querySelectorAll('.tech-filter-btn');
-    const techItems = document.querySelectorAll('.tech-item');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-
-        filterButtons.forEach(b => {
-          b.className = 'tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-medium text-slate-400 bg-cyber-card border border-white/10 hover:text-white transition';
-        });
-        button.className = 'tech-filter-btn px-4 py-2 rounded-lg text-xs font-mono font-bold bg-cyan-500 text-slate-950 transition';
-
-        techItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
-        });
-      });
-    });
-
-    // 5. Interactive Copilot Simulation
-    const promptButtons = document.querySelectorAll('.copilot-btn');
-    const chatWindow = document.getElementById('chat-stream-window');
-
-    const copilotResponses = {
-      k8s: {
-        user: "Analyze Kubernetes Pod Crash: payment-api-7c4fd9d-8xk2w is throwing CrashLoopBackOff.",
-        reply: `<strong>[Diagnosis Complete - Confidence: 99.1%]</strong><br><br>
-        • <strong>Exit Code 137 (OOMKilled)</strong> detected at 14:22 UTC.<br>
-        • Current container memory limit: <strong>512Mi</strong>. Peak memory demand reached <strong>648Mi</strong> during JVM heap garbage collection pause.<br>
-        • <strong>Remediation Plan:</strong><br>
-        1. Updating Deployment spec resource limits to <code class="text-cyan-300">1Gi</code> memory.<br>
-        2. Adjusting JVM flags: <code class="text-cyan-300">-XX:MaxRAMPercentage=75.0</code>.<br>
-        3. Automated pull-request created in GitOps repo: <span class="text-emerald-400">PR #482 Auto-Merge Enabled</span>.`
+    // 3. Interactive Pill Showcase Data (Matching Reference Screenshot & Expanded with AI)
+    const serviceData = {
+      strategy: {
+        tag: "STRATEGY & GOVERNANCE",
+        title: "Cloud Strategy & Consulting",
+        desc: "Define a high-impact roadmap tailored to business goals. We audit current infrastructure, assess security and compliance readiness, and architect modular multi-account landing zones across AWS, Azure, and Google Cloud with FinOps governance.",
+        features: [
+          "Enterprise Cloud Readiness Assessment",
+          "AWS & Azure Landing Zone Architectures",
+          "FinOps Cloud Cost Optimization",
+          "Zero-Trust & SOC2 Security Governance"
+        ],
+        header: "ARCHITECTURE BLUEPRINT",
+        steps: [
+          { name: "1. Assessment & TCO Discovery", time: "Week 1-2" },
+          { name: "2. Landing Zone & VPC IaC", time: "Week 3-4" },
+          { name: "3. Security & Compliance Hardening", time: "Week 5" },
+          { name: "4. FinOps Cost Guardrails", time: "Automated" }
+        ],
+        stack: "Stack: Terraform, AWS Organizations, Azure Management"
       },
-      terraform: {
-        user: "Generate production-grade Terraform for a High-Availability Multi-AZ AWS VPC.",
-        reply: `<strong>[IaC Blueprint Synthesized]</strong><br><br>
-        <code>
-        module "vpc" {<br>
-        &nbsp;&nbsp;source = "terraform-aws-modules/vpc/aws"<br>
-        &nbsp;&nbsp;name = "myka-prod-vpc"<br>
-        &nbsp;&nbsp;cidr = "10.0.0.0/16"<br>
-        &nbsp;&nbsp;azs = ["us-east-1a", "us-east-1b", "us-east-1c"]<br>
-        &nbsp;&nbsp;private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]<br>
-        &nbsp;&nbsp;public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]<br>
-        &nbsp;&nbsp;enable_nat_gateway = true<br>
-        &nbsp;&nbsp;single_nat_gateway = false # Multi-AZ High Availability<br>
-        &nbsp;&nbsp;enable_dns_hostnames = true<br>
-        }
-        </code><br>
-        <span class="text-emerald-400">Validated against AWS Well-Architected Framework & CIS AWS Foundations Benchmark.</span>`
+      devops: {
+        tag: "VELOCITY & AUTOMATION",
+        title: "DevOps as a Service",
+        desc: "Eliminate deployment friction and developer bottlenecks. We build end-to-end continuous integration and delivery pipelines with automated test suites, secret injection, and immutable container deployment.",
+        features: [
+          "Automated GitHub Actions & GitLab CI",
+          "Kubernetes & Helm Release Management",
+          "Declarative GitOps with ArgoCD & Flux",
+          "Blue-Green & Canary Rollout Deployments"
+        ],
+        header: "PIPELINE ORCHESTRATION",
+        steps: [
+          { name: "1. Git Push & Automated Linting", time: "0.2s" },
+          { name: "2. Container Build & CVE Scan", time: "1.1m" },
+          { name: "3. ArgoCD GitOps Sync", time: "15s" },
+          { name: "4. Production Canary Verification", time: "Zero-Downtime" }
+        ],
+        stack: "Stack: GitHub Actions, ArgoCD, Docker, Helm, Trivy"
       },
-      rag: {
-        user: "How do we architect an internal enterprise RAG chatbot without sending company data outside our VPC?",
-        reply: `<strong>[Private Enterprise RAG Topology]</strong><br><br>
-        1. <strong>Inference Layer:</strong> Deploy quantized <em>Llama-3.1-70B-Instruct-AWQ</em> via <strong>vLLM</strong> on private GPU nodes (g5.12xlarge / 4x A10G) inside an isolated private subnet.<br>
-        2. <strong>Vector Embeddings:</strong> Self-hosted <strong>Qdrant</strong> cluster encrypted with customer-managed AWS KMS keys.<br>
-        3. <strong>Data Connectors:</strong> Scheduled Airbyte/LangChain pipeline pulling private Markdown/PDF docs from restricted S3 buckets.<br>
-        4. <strong>Network Boundary:</strong> No public internet egress. Accessible exclusively via AWS PrivateLink and WireGuard VPN.`
+      migration: {
+        tag: "TRANSFORMATION & RESILIENCE",
+        title: "Cloud Migration",
+        desc: "Seamless, zero-downtime migration of legacy workloads, monoliths, and enterprise databases into high-availability AWS, Azure, or GCP cloud platforms.",
+        features: [
+          "Rehost, Replatform & Refactor Frameworks",
+          "Database Migration Service (DMS) Setup",
+          "Zero-Data-Loss Cutover Strategies",
+          "Post-Migration Validation & Performance Tuning"
+        ],
+        header: "MIGRATION FLIGHT PLAN",
+        steps: [
+          { name: "1. Dependency Mapping & Discovery", time: "Phase 1" },
+          { name: "2. Hybrid DirectConnect / VPN Setup", time: "Phase 2" },
+          { name: "3. Continuous Database Replication", time: "Real-time" },
+          { name: "4. DNS Cutover with Zero Downtime", time: "Completed" }
+        ],
+        stack: "Stack: AWS DMS, Azure Migrate, Velero, Terraform"
       },
-      finops: {
-        user: "Our AWS GPU & compute bills jumped 45% this month. What is the fastest path to optimize costs?",
-        reply: `<strong>[FinOps Fast-Action Strategy]</strong><br><br>
-        • <strong>Step 1: Spot & Auto-Scaler Transition:</strong> Migrate non-critical inference workers and CI test runners to Amazon EC2 Spot with Karpenter (Instant <strong>68% cost reduction</strong>).<br>
-        • <strong>Step 2: Dynamic Scale-to-Zero:</strong> Spin down development GPU endpoints during non-business hours (saves <strong>~12 hours/day</strong> of idle GPU runtime).<br>
-        • <strong>Step 3: Model Quantization:</strong> Convert FP16 weights to AWQ (4-bit). Run 70B models on 2x A100 instead of 4x A100.`
+      modernization: {
+        tag: "ARCHITECTURE REDESIGN",
+        title: "Application Modernization",
+        desc: "Transform brittle legacy monoliths into lightweight, decoupled microservices. We containerize applications, decouple stateful databases, and implement event-driven architectures.",
+        features: [
+          "Monolith to Microservices Deconstruction",
+          "Containerization with Docker & Podman",
+          "API Gateway & Service Mesh (Istio / Linkerd)",
+          "Kafka & Event-Driven Cloud Messaging"
+        ],
+        header: "MODERNIZATION MATRIX",
+        steps: [
+          { name: "1. Domain-Driven Design (DDD) Audit", time: "Step 1" },
+          { name: "2. Stateless Service Containerization", time: "Step 2" },
+          { name: "3. Service Mesh Traffic Splitting", time: "Step 3" },
+          { name: "4. High-Throughput Event Streaming", time: "Active" }
+        ],
+        stack: "Stack: Kubernetes, Docker, Istio, Apache Kafka"
+      },
+      native: {
+        tag: "CLOUD FIRST SCALE",
+        title: "Cloud Native Development",
+        desc: "Build highly scalable, fault-tolerant applications natively designed for the cloud. We utilize serverless architectures, managed databases, and distributed event systems.",
+        features: [
+          "Serverless Architecture (AWS Lambda / Azure Functions)",
+          "DynamoDB, Aurora Serverless & CosmosDB",
+          "Asynchronous Event Sourcing (SQS, SNS, EventBridge)",
+          "Distributed Tracing with OpenTelemetry"
+        ],
+        header: "SERVERLESS RUNTIME",
+        steps: [
+          { name: "1. Event Trigger & Ingestion", time: "1ms" },
+          { name: "2. Ephemeral Compute Execution", time: "42ms" },
+          { name: "3. Global Distributed Persistence", time: "Under 10ms" },
+          { name: "4. Auto-Scale to Zero on Idle", time: "100% FinOps" }
+        ],
+        stack: "Stack: AWS Lambda, EventBridge, DynamoDB, Go, Node.js"
+      },
+      managed: {
+        tag: "24/7 INFRASTRUCTURE CARE",
+        title: "Cloud Managed Services",
+        desc: "Focus on your product while our certified cloud architects manage infrastructure health, security updates, compliance patching, and dynamic resource scaling round-the-clock.",
+        features: [
+          "24/7/365 Proactive Cloud Monitoring",
+          "Automated Patching & Vulnerability Fixes",
+          "Continuous FinOps & Cost Optimization",
+          "Dedicated Senior SRE Squad"
+        ],
+        header: "OPERATIONAL RUNBOOK",
+        steps: [
+          { name: "1. 24/7 Telemetry Ingestion", time: "Continuous" },
+          { name: "2. OS Security Patch Dispatch", time: "Automated" },
+          { name: "3. Reserved Instance / Savings Plan Tuning", time: "Monthly" },
+          { name: "4. Disaster Recovery Drills", time: "Quarterly" }
+        ],
+        stack: "Stack: Datadog, AWS CloudWatch, PagerDuty, New Relic"
+      },
+      sre: {
+        tag: "HIGH AVAILABILITY",
+        title: "Site Reliability Engineering (SRE)",
+        desc: "Engineer systems for 99.999% availability. We implement formal Service Level Objectives (SLOs), error budget policies, chaos engineering, and automated incident response.",
+        features: [
+          "SLI / SLO & Error Budget Engineering",
+          "Chaos Engineering Drills with LitmusChaos",
+          "Blameless Post-Mortem Protocols",
+          "Automated Runbooks & PagerDuty Routing"
+        ],
+        header: "SRE METRIC DASHBOARD",
+        steps: [
+          { name: "1. Uptime SLA Verification", time: "99.999%" },
+          { name: "2. P99 Latency Guardrails", time: "< 25ms" },
+          { name: "3. Chaos Injector Testing", time: "Verified" },
+          { name: "4. MTTR Mean Time to Repair", time: "< 4 minutes" }
+        ],
+        stack: "Stack: Prometheus, Grafana, OpenTelemetry, LitmusChaos"
+      },
+      dr: {
+        tag: "CONTINUITY & BACKUP",
+        title: "DR Implementation & DevSecOps",
+        desc: "Protect mission-critical data against regional outages, ransomware, and catastrophic failures. We design multi-region automated failovers and integrate security scans into CI/CD.",
+        features: [
+          "Multi-Region Active-Active / Hot-Standby DR",
+          "Automated Snapshot & Backup Replication",
+          "HashiCorp Vault Secret Management",
+          "Static & Dynamic Security Code Scans (SAST/DAST)"
+        ],
+        header: "DISASTER RECOVERY SPECS",
+        steps: [
+          { name: "1. RPO (Recovery Point Objective)", time: "< 1 minute" },
+          { name: "2. RTO (Recovery Time Objective)", time: "< 5 minutes" },
+          { name: "3. Automated Cross-Region Failover", time: "Enabled" },
+          { name: "4. Secrets Rotation Policy", time: "Every 30 Days" }
+        ],
+        stack: "Stack: AWS Route53 Failover, HashiCorp Vault, SonarQube"
+      },
+      aiops: {
+        tag: "AUTONOMOUS TELEMETRY",
+        title: "AIOps & Autonomous Observability",
+        desc: "Harness machine learning to parse millions of telemetry events in real time. Automatically detect metric anomalies, pinpoint root causes, and trigger self-healing runbooks without waking up engineers.",
+        features: [
+          "AI-Assisted Incident Correlation",
+          "Dynamic Noise Reduction & Alert Deduplication",
+          "Automated Kubernetes Pod & Node Auto-Heal",
+          "Predictive Capacity & Cost Forecasting"
+        ],
+        header: "AIOPS ENGINE REAL-TIME",
+        steps: [
+          { name: "1. Streaming Metric Ingestion", time: "180k evt/s" },
+          { name: "2. ML Anomaly Classifier", time: "0.03s latency" },
+          { name: "3. Automated SRE Remediation", time: "Triggered" },
+          { name: "4. Incident Ticket Auto-Resolved", time: "Zero-Human" }
+        ],
+        stack: "Stack: Prometheus, Dynatrace Davis AI, Datadog AI, Grafana"
+      },
+      genai: {
+        tag: "SOVEREIGN ARTIFICIAL INTELLIGENCE",
+        title: "Enterprise AI, LLMs & Chatbots",
+        desc: "Host private, fine-tuned Large Language Models and high-performance RAG chatbots inside your own VPC. Protect sensitive corporate data while giving your workforce superhuman productivity.",
+        features: [
+          "vLLM & TensorRT High-Throughput Serving",
+          "Private Llama 3, Mistral & DeepSeek Clusters",
+          "Internal Enterprise RAG with Qdrant Vector DB",
+          "4-Bit Model Quantization for 70% GPU Cost Cut"
+        ],
+        header: "GPU INFERENCE TOPOLOGY",
+        steps: [
+          { name: "1. Isolated VPC GPU Nodes (A100/H100)", time: "Ready" },
+          { name: "2. Vector Embeddings Database", time: "Qdrant Cluster" },
+          { name: "3. Token Streaming Latency", time: "16ms / token" },
+          { name: "4. Data Privacy Egress", time: "0% Internet Leak" }
+        ],
+        stack: "Stack: vLLM, Ray, LangChain, Qdrant, Ollama, PyTorch"
       }
     };
 
-    promptButtons.forEach(btn => {
+    // 4. Pill Click Handler
+    const pillButtons = document.querySelectorAll('.service-pill-btn');
+    const serviceTag = document.getElementById('service-tag');
+    const serviceTitle = document.getElementById('service-title');
+    const serviceDesc = document.getElementById('service-desc');
+    const serviceFeatures = document.getElementById('service-features');
+    const servicePanelHeader = document.getElementById('service-panel-header');
+    const servicePanelContent = document.getElementById('service-panel-content');
+
+    pillButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const type = btn.getAttribute('data-type');
-        const data = copilotResponses[type];
+        const key = btn.getAttribute('data-service');
+        const data = serviceData[key];
         if (!data) return;
 
-        // User message bubble
-        const userMsg = document.createElement('div');
-        userMsg.className = 'flex items-start justify-end gap-3.5';
-        userMsg.innerHTML = `
-          <div class="bg-cyan-500/15 border border-cyan-500/30 rounded-2xl rounded-tr-none p-3.5 max-w-xl text-xs sm:text-sm text-cyan-200">
-            ${data.user}
+        // Toggle active pill styling
+        pillButtons.forEach(b => {
+          b.className = 'service-pill-btn px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-400/30 bg-transparent text-slate-200 hover:border-purple-400 hover:text-white cursor-pointer';
+        });
+        btn.className = 'service-pill-btn active px-6 py-2.5 rounded-full text-sm font-semibold border border-purple-500/40 bg-[#5025d1] text-white cursor-pointer shadow-md';
+
+        // Update Content
+        serviceTag.textContent = data.tag;
+        serviceTitle.textContent = data.title;
+        serviceDesc.textContent = data.desc;
+
+        // Update Features
+        serviceFeatures.innerHTML = data.features.map(f => `
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-[#090D1A] border border-white/[0.06]">
+            <i class="fa-solid fa-circle-check text-purple-400 text-sm"></i>
+            <span class="text-sm text-slate-200 font-medium">${f}</span>
           </div>
-          <div class="w-8 h-8 rounded-lg bg-slate-800 border border-white/10 flex items-center justify-center shrink-0 text-slate-300 font-bold text-xs">
-            YOU
+        `).join('');
+
+        // Update Panel
+        servicePanelHeader.textContent = data.header;
+        servicePanelContent.innerHTML = data.steps.map(s => `
+          <div class="p-3 rounded-lg bg-slateCard border border-white/[0.04] flex items-center justify-between">
+            <span>${s.name}</span>
+            <span class="text-purple-400 font-semibold">${s.time}</span>
+          </div>
+        `).join('') + `
+          <div class="mt-4 pt-3 border-t border-white/[0.08] text-[11px] text-slate-400">
+            ${data.stack}
           </div>
         `;
-        chatWindow.appendChild(userMsg);
-
-        // Assistant loading placeholder
-        const aiMsg = document.createElement('div');
-        aiMsg.className = 'flex items-start gap-3.5';
-        aiMsg.innerHTML = `
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shrink-0 text-slate-950 font-bold text-xs">
-            AI
-          </div>
-          <div class="bg-slate-900 border border-white/10 rounded-2xl rounded-tl-none p-4 max-w-2xl text-xs sm:text-sm text-slate-300 leading-relaxed shadow-md">
-            <span class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs">
-              <i class="fa-solid fa-circle-notch fa-spin"></i> Processing autonomous inference...
-            </span>
-          </div>
-        `;
-        chatWindow.appendChild(aiMsg);
-        chatWindow.scrollTop = chatWindow.scrollHeight;
-
-        // Simulate streaming delay
-        setTimeout(() => {
-          aiMsg.querySelector('.bg-slate-900').innerHTML = data.reply;
-          chatWindow.scrollTop = chatWindow.scrollHeight;
-        }, 700);
       });
     });
 
-    // 6. Web3Forms Asynchronous AJAX Form Submission
+    // 5. Web3Forms Asynchronous AJAX Form Submission
     const enquiryForm = document.getElementById('enquiry-form');
     const statusBox = document.getElementById('form-status');
     const submitBtn = document.getElementById('submit-btn');
@@ -1107,13 +1184,13 @@
       // Verification check for placeholder key
       if (!accessKeyInput.value || accessKeyInput.value === 'afcbc080-f8a0-4e16-a08c-7151ed4f38c2') {
         statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-amber-500/10 border border-amber-500/50 text-amber-300 block';
-        statusBox.innerHTML = '<strong>Action Required:</strong> Please generate your free access key at <a href="https://web3forms.com" target="_blank" class="underline font-bold text-white">web3forms.com</a> and replace <code>afcbc080-f8a0-4e16-a08c-7151ed4f38c2</code> in index.html to receive inquiries directly in your inbox.';
+        statusBox.innerHTML = '<strong>Configuration Note:</strong> Please insert your free access key from <a href="https://web3forms.com" target="_blank" class="underline font-bold text-white">web3forms.com</a> into line 527 of index.html to receive inquiries in your inbox.';
         return;
       }
 
       const originalBtnText = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-sm"></i> <span>Transmitting via Web3Forms...</span>';
+      submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin text-sm"></i> <span>Transmitting Strategy Request...</span>';
 
       const formData = new FormData(enquiryForm);
       const jsonObject = Object.fromEntries(formData.entries());
@@ -1132,15 +1209,15 @@
 
         if (response.status === 200 && result.success) {
           statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 block';
-          statusBox.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> <strong>Consultation Request Received!</strong> Our principal cloud architects will review your infrastructure parameters and respond within 4 business hours.';
+          statusBox.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> <strong>Consultation Request Received!</strong> Our principal cloud & DevOps architects will review your project parameters and respond within 4 business hours.';
           enquiryForm.reset();
         } else {
           statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-rose-500/20 border border-rose-500/50 text-rose-300 block';
-          statusBox.textContent = result.message || 'Submission failed. Please email us directly at contact@mykacloud.com.com.';
+          statusBox.textContent = result.message || 'Submission failed. Please email us directly at contact@mykacloud.com.';
         }
       } catch (err) {
         statusBox.className = 'text-xs font-mono p-4 rounded-xl text-center mt-3 bg-rose-500/20 border border-rose-500/50 text-rose-300 block';
-        statusBox.textContent = 'Network or connection error. Please verify your internet or contact contact@mykacloud.com.com.';
+        statusBox.textContent = 'Network error. Please check your internet connection or email us at contact@mykacloud.com.';
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
